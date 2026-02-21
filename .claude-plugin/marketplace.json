@@ -1,0 +1,11 @@
+{
+  "name": "lang-tutor-marketplace",
+  "owner": { "name": "samhamilton" },
+  "plugins": [
+    {
+      "name": "lang-tutor",
+      "source": "./",
+      "description": "Language learning environment for Claude Code. Get grammar corrections, idiom suggestions, and vocabulary help in your target language — or use reverse mode for translations with vocabulary breakdowns."
+    }
+  ]
+}
