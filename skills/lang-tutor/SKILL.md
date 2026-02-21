@@ -134,3 +134,4 @@ After the feedback block, proceed to handle the user's actual coding/task reques
 - **If the user writes in a third language** (neither target nor native), ask which language they'd like feedback on
 - **Respect the user's flow** — if a message is very short (e.g., "yes", "ok", "run it"), a one-line feedback note or just encouragement is sufficient
 - **Keep level calibration consistent** across both feedback modes
+- **Ignore missing accents, diacritics, and special characters** — these are hard to type on a standard keyboard in a coding environment. Do not flag missing accents (e.g., "nao" for "não", "cafe" for "café") as errors. Only correct actual grammar, word choice, or structure mistakes.
