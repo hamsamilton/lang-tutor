@@ -43,7 +43,7 @@ Then Claude Code handles your actual request as usual. The language feedback is 
 
 ```bash
 /plugin marketplace add hamsamilton/lang-tutor
-/plugin install lang-tutor@lang-tutor-marketplace
+/plugin install lang-tutor@hamsamilton-lang-tutor
 ```
 
 ## Usage
