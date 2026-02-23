@@ -2,6 +2,9 @@
   "name": "lang-tutor",
   "description": "Turns Claude Code into a language learning environment. Get grammar corrections, idiom suggestions, and vocabulary translations while coding in your target language.",
   "version": "1.0.0",
-  "author": "samhamilton",
-  "skills": ["skills/lang-tutor"]
+  "author": {
+    "name": "samhamilton",
+    "url": "https://github.com/hamsamilton"
+  },
+  "skills": "./skills/"
 }
