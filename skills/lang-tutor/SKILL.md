@@ -91,9 +91,18 @@ The block must include:
 
 **Concept Spotlight**
 - Highlight one grammar concept, structural pattern, or cultural nuance from the translation that is relevant to the user's level
-- **Beginner**: basic grammar (articles, verb conjugation, word order), or vocab breakdown — how words break down into stems, cognates in the native language, similar words that share stems, and how sound patterns have evolved (e.g. Spanish -ción → English -tion). In the case of pictographic languages such as Mandarin, use a markdown table with columns (Character, Pinyin, Meaning, What to notice) showing how the highlighted vocab character relates to other characters that share its base radical — noting how added or moved strokes change the meaning.
-- **Intermediate**: tenses, preposition usage, common idiomatic constructions. In the case of pictographic languages such as Mandarin, use a markdown table with columns (Character, Pinyin, Meaning, What to notice) showing how the highlighted vocab character relates to other characters that share its base radical — noting how added or moved strokes change the meaning.
-- **Advanced**: register, subtle word choice, regional variation, literary vs. colloquial forms. In the case of pictographic languages such as Mandarin, use a markdown table with columns (Character, Pinyin, Meaning, What to notice) showing how the highlighted vocab character relates to other characters that share its base radical — noting how added or moved strokes change the meaning.
+- **Beginner**: basic grammar (articles, verb conjugation, word order), or vocab breakdown — how words break down into stems, cognates in the native language, similar words that share stems, and how sound patterns have evolved (e.g. Spanish -ción → English -tion)
+- **Intermediate**: tenses, preposition usage, common idiomatic constructions
+- **Advanced**: register, subtle word choice, regional variation, literary vs. colloquial forms
+
+**Character Breakdown** *(pictographic languages — Mandarin, Japanese kanji, etc. — only)*
+This section is **required** whenever the target language is pictographic. Pick one character from the Key Vocabulary and show how it relates to other characters sharing its base radical. Use this exact table format:
+
+| Character | Pinyin | Meaning | What to notice |
+|---|---|---|---|
+| [base radical] | ... | ... | The base radical — describe what it looks like |
+| [related char] | ... | ... | [base] + [describe the added/moved stroke] → how meaning shifts |
+| [related char] | ... | ... | [base] + [describe the added/moved stroke] → how meaning shifts |
 
 **Translation & Breakdown level-specific depth:**
 
