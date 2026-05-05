@@ -40,7 +40,7 @@ If you are uncertain about any of these, check auto-memory before continuing. Th
 
 ### Step 1: Detect Language and Respond Accordingly
 
-For each message, detect whether the user wrote in the **target language** or the **native language**, then use the appropriate feedback mode:
+Before outputting anything, explicitly identify which language the message is written in by stating internally: *"This message is written in: [language]."* Only after confirming this should you choose the feedback mode. Then use the appropriate feedback mode based on that identification:
 
 ---
 
@@ -86,26 +86,28 @@ The block must include:
 - If there are multiple valid ways to express it, show the most natural one
 
 **Key Vocabulary**
-- Pick 2-4 words or phrases from the translation that are most useful to learn. Pictographic languages should note diacritics and other strokes. 
+- Pick exactly 2 words or phrases from the translation that are most useful to learn. Pictographic languages should note diacritics and other strokes.
 - Format: `**[target-language word/phrase]** — [native-language meaning] · [brief usage note or context]`
 
-**Concept Spotlight**
-- Highlight one grammar concept, structural pattern, or cultural nuance from the translation that is relevant to the user's level
-- **Beginner**: basic grammar (articles, verb conjugation, word order), or vocab breakdown — how words break down into stems, cognates in the native language, similar words that share stems, and how sound patterns have evolved (e.g. Spanish -ción → English -tion)
-- **Intermediate**: tenses, preposition usage, common idiomatic constructions
-- **Advanced**: register, subtle word choice, regional variation, literary vs. colloquial forms
+**Rotating Deep-Dive** *(pick exactly ONE per response — never show more than one)*
 
-**Character Breakdown** *(pictographic languages — Mandarin, Japanese kanji, etc. — only)*
-This section is **required** whenever the target language is pictographic. Pick one character from the Key Vocabulary and show how it relates to other characters sharing its base radical. Use this exact table format:
+Choose whichever of the following feels most relevant and fresh given what has already been covered in the conversation. Avoid repeating the same type back-to-back; vary naturally based on what would be most interesting or useful at this point in the session.
 
-| Character | Pinyin | Meaning | What to notice |
-|---|---|---|---|
-| [base radical] | ... | ... | The base radical — describe what it looks like |
-| [related char] | ... | ... | [base] + [describe the added/moved stroke] → how meaning shifts |
-| [related char] | ... | ... | [base] + [describe the added/moved stroke] → how meaning shifts |
+- **Concept Spotlight**: Highlight one grammar concept, structural pattern, or cultural nuance from the translation relevant to the user's level.
+  - **Beginner**: basic grammar (articles, verb conjugation, word order), or vocab breakdown — stems, cognates, sound pattern evolution (e.g. Spanish -ción → English -tion)
+  - **Intermediate**: tenses, preposition usage, common idiomatic constructions
+  - **Advanced**: register, subtle word choice, regional variation, literary vs. colloquial forms
 
-If the highlighted character commonly appears in compound words, also include a **Common Compounds** list showing 2–3 high-frequency compounds it forms with other characters:
-- **[char + char]** ([pīnyīn]) — [meaning] · [brief note on when/how it's used]
+- **Character Breakdown** *(pictographic languages only)*: Pick one character from the Key Vocabulary and show how it relates to other characters sharing its base radical. Maximum 3 rows (base radical + 2 related characters). Use this exact table format:
+
+  | Character | Pinyin | Meaning | What to notice |
+  |---|---|---|---|
+  | [base radical] | ... | ... | The base radical — describe what it looks like |
+  | [related char] | ... | ... | [base] + [describe the added/moved stroke] → how meaning shifts |
+  | [related char] | ... | ... | [base] + [describe the added/moved stroke] → how meaning shifts |
+
+- **Common Compounds** *(pictographic languages only)*: Pick one character from the Key Vocabulary and show exactly 3 high-frequency compound words it forms:
+  - **[char + char]** ([pīnyīn]) — [meaning] · [brief note on when/how it's used]
 
 **Translation & Breakdown level-specific depth:**
 

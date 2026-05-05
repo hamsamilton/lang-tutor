@@ -41,9 +41,23 @@ Then Claude Code handles your actual request as usual. The language feedback is 
 
 ## Install
 
+### Via Plugin Marketplace
+
 ```bash
 /plugin marketplace add hamsamilton/lang-tutor
 /plugin install lang-tutor@hamsamilton-lang-tutor
+```
+
+### Direct Install from GitHub
+
+```bash
+git clone https://github.com/hamsamilton/lang-tutor ~/.claude/skills/lang-tutor
+```
+
+Then activate in any Claude Code session:
+
+```bash
+/lang-tutor
 ```
 
 ## Usage
