@@ -5,7 +5,7 @@
     {
       "name": "lang-tutor",
       "source": "./",
-      "description": "Language learning environment for Claude Code. Get grammar corrections, idiom suggestions, and vocabulary help in your target language — or use reverse mode for translations with vocabulary breakdowns."
+      "description": "Language learning environment for Claude Code. Get grammar corrections, idiom suggestions, and vocabulary breakdowns while you work — write in your target language for feedback, or your native language for translations."
     }
   ]
 }
