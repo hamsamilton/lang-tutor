@@ -104,6 +104,9 @@ This section is **required** whenever the target language is pictographic. Pick 
 | [related char] | ... | ... | [base] + [describe the added/moved stroke] → how meaning shifts |
 | [related char] | ... | ... | [base] + [describe the added/moved stroke] → how meaning shifts |
 
+If the highlighted character commonly appears in compound words, also include a **Common Compounds** list showing 2–3 high-frequency compounds it forms with other characters:
+- **[char + char]** ([pīnyīn]) — [meaning] · [brief note on when/how it's used]
+
 **Translation & Breakdown level-specific depth:**
 
 | Aspect | Beginner | Intermediate | Advanced |
