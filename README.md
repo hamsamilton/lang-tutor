@@ -36,8 +36,28 @@ Then Claude Code handles your actual request as usual. The language feedback is 
 - **Automatic language detection** — no need to toggle modes. Write in either language and get the right feedback
 - **Three proficiency levels** — beginner, intermediate, and advanced, each with calibrated feedback depth
 - **Preference persistence** — your language, level, and native language are saved across sessions
-- **Works with any language** — Portuguese, Spanish, Japanese, Mandarin, French, Korean, Arabic — if Claude speaks it, you can learn it
+- **Works with any language** — dedicated guides for the most popular languages, plus a generic guide for everything else. If Claude speaks it, you can learn it
 - **Non-intrusive** — feedback appears in a compact block before the normal response. Your coding workflow stays intact
+
+## Supported languages
+
+Each supported language has a dedicated tutor guide with language-specific error categories, deep-dives, and pitfall coverage:
+
+| Language | Guide highlights |
+|---|---|
+| Chinese (Mandarin) | Character/radical breakdowns, compound words, pinyin, measure words, 了 usage |
+| Japanese | Kanji breakdowns, politeness registers, particles, counters |
+| Spanish | ser/estar, preterite vs. imperfect, subjunctive triggers, false friends |
+| French | Gender agreement, passé composé vs. imparfait, tu/vous register |
+| Italian | essere/avere auxiliaries, preposition contractions, congiuntivo |
+| Portuguese | Brazilian/European variants, contractions, ser/estar/ficar |
+| German | Case system, word order, separable verbs, compound-noun breakdowns |
+
+Any other language (Korean, Arabic, Hindi, ...) works through the generic guide, which provides the same feedback modes without language-specific tailoring.
+
+## How it works
+
+The skill is split for token efficiency: a slim `SKILL.md` handles your language status (target language, native language, level) and routing, then loads only your target language's guide from `skills/lang-tutor/languages/` on demand. Your status is stored in Claude's auto-memory, so it persists across sessions and plugin updates.
 
 ## Install
 
@@ -50,8 +70,11 @@ Then Claude Code handles your actual request as usual. The language feedback is 
 
 ### Direct Install from GitHub
 
+Clone the repo anywhere, then symlink the skill directory (it must be the `skills/lang-tutor` subdirectory, so the `languages/` guides come along):
+
 ```bash
-git clone https://github.com/hamsamilton/lang-tutor ~/.claude/skills/lang-tutor
+git clone https://github.com/hamsamilton/lang-tutor ~/lang-tutor
+ln -s ~/lang-tutor/skills/lang-tutor ~/.claude/skills/lang-tutor
 ```
 
 Then activate in any Claude Code session:

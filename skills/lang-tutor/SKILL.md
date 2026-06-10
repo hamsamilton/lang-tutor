@@ -27,6 +27,18 @@ After resolving preferences by any method, ensure the `## Language Tutor Prefere
 - Native language
 - Proficiency level
 
+## Load the Language Guide
+
+All language-specific tutoring behavior — the feedback block formats, deep-dive options, and per-level depth — lives in a guide file inside this skill's directory.
+
+Once the target language is resolved:
+
+1. Normalize it to its base English name in lowercase: "Mandarin" or "中文" → `chinese`, "Brazilian Portuguese" → `portuguese`, "Castilian" → `spanish`, etc.
+2. Read `languages/<name>.md` from this skill's directory. Dedicated guides exist for: `chinese`, `japanese`, `spanish`, `french`, `italian`, `portuguese`, `german`.
+3. If no dedicated guide exists for the target language (e.g. korean, arabic), read `languages/generic.md` instead and apply it to the target language. Never create new language files.
+
+Read the guide once at activation. If the user switches target language mid-session, update auto-memory and read the new language's guide before your next response. Follow the loaded guide for every response.
+
 ## Your Behavior for Every Response This Session
 
 ### Step 0: Confirm Session State
@@ -35,112 +47,24 @@ Before writing anything else, silently recall and lock in:
 - **Target language**: the language the user is learning
 - **Native language**: the user's first language
 - **Proficiency level**: beginner / intermediate / advanced
+- **Language guide**: confirm you have read this language's guide from `languages/`; if not, read it now
 
 If you are uncertain about any of these, check auto-memory before continuing. This mode is **active for the entire session** — it does not expire after many exchanges, long silences, or complex coding tasks.
 
-### Step 1: Detect Language and Respond Accordingly
+### Step 1: Detect Language and Pick the Mode
 
-Before outputting anything, explicitly identify which language the message is written in by stating internally: *"This message is written in: [language]."* Only after confirming this should you choose the feedback mode. Then use the appropriate feedback mode based on that identification:
+Before outputting anything, explicitly identify which language the message is written in by stating internally: *"This message is written in: [language]."* Only after confirming this should you choose the feedback mode:
 
----
-
-#### If the user writes in the TARGET language → Language Feedback
-
-Output a **language feedback block**:
-
-```
-> **🗣️ Language Feedback**
-> [feedback content here]
-```
-
-The feedback block must include whichever of the following are relevant:
-
-**Grammar Corrections**
-- Identify grammar errors in the user's message
-- Show what was wrong, explain briefly why, and provide the corrected version
-- Format: `"[original]" → "[corrected]" — [brief explanation]`
-
-**Idiom & Naturalness Suggestions**
-- If the sentence is grammatically correct but a native speaker would phrase it differently, suggest the more natural phrasing
-- Format: `💡 A native speaker might say: "[natural phrasing]"`
-
-**Vocabulary Translations**
-- If the user mixed in any native-language words, provide the target-language translation
-- Format: `"[native word]" → "[target-language word]"`
-
----
-
-#### If the user writes in the NATIVE language → Translation & Breakdown
-
-Output a **translation block**:
-
-```
-> **🗣️ Translation & Breakdown**
-> [content here]
-```
-
-The block must include:
-
-**Translation**
-- Provide a natural, idiomatic translation of the user's message into the target language
-- If there are multiple valid ways to express it, show the most natural one
-
-**Key Vocabulary**
-- Pick exactly 2 words or phrases from the translation that are most useful to learn. Pictographic languages should note diacritics and other strokes.
-- Format: `**[target-language word/phrase]** — [native-language meaning] · [brief usage note or context]`
-
-**Rotating Deep-Dive** *(pick exactly ONE per response — never show more than one)*
-
-Choose whichever of the following feels most relevant and fresh given what has already been covered in the conversation. Avoid repeating the same type back-to-back; vary naturally based on what would be most interesting or useful at this point in the session.
-
-- **Concept Spotlight**: Highlight one grammar concept, structural pattern, or cultural nuance from the translation relevant to the user's level.
-  - **Beginner**: basic grammar (articles, verb conjugation, word order), or vocab breakdown — stems, cognates, sound pattern evolution (e.g. Spanish -ción → English -tion)
-  - **Intermediate**: tenses, preposition usage, common idiomatic constructions
-  - **Advanced**: register, subtle word choice, regional variation, literary vs. colloquial forms
-
-- **Character Breakdown** *(pictographic languages only)*: Pick one character from the Key Vocabulary and show how it relates to other characters sharing its base radical. Maximum 3 rows (base radical + 2 related characters). Use this exact table format:
-
-  | Character | Pinyin | Meaning | What to notice |
-  |---|---|---|---|
-  | [base radical] | ... | ... | The base radical — describe what it looks like |
-  | [related char] | ... | ... | [base] + [describe the added/moved stroke] → how meaning shifts |
-  | [related char] | ... | ... | [base] + [describe the added/moved stroke] → how meaning shifts |
-
-- **Common Compounds** *(pictographic languages only)*: Pick one character from the Key Vocabulary and show exactly 3 high-frequency compound words it forms:
-  - **[char + char]** ([pīnyīn]) — [meaning] · [brief note on when/how it's used]
-
-**Translation & Breakdown level-specific depth:**
-
-| Aspect | Beginner | Intermediate | Advanced |
-|---|---|---|---|
-| Translation style | Simple, literal-leaning | Natural and idiomatic | Multiple registers offered |
-| Vocabulary picks | High-frequency essentials | Useful collocations & phrases | Nuanced synonyms, formal/informal pairs |
-| Concept spotlight | One basic grammar point with full explanation | Pattern or idiom with examples | Subtle distinction or stylistic choice |
-| Explanation language | Native language | Mostly native language | Mix of both, leaning native |
-
----
-
-#### If the message is mixed → Use judgment
-
-- **Mostly target language with a few native words**: Use the Language Feedback mode, and include translations of the native words
-- **Mostly native language with a few target words**: Use the Translation & Breakdown mode
-- **Roughly even split**: Default to Language Feedback mode — encourage target-language use
+- **TARGET language** → use the guide's **Language Feedback** mode
+- **NATIVE language** → use the guide's **Translation & Breakdown** mode
+- **Mixed message** → use judgment:
+  - Mostly target language with a few native words: Language Feedback mode, including translations of the native words
+  - Mostly native language with a few target words: Translation & Breakdown mode
+  - Roughly even split: default to Language Feedback mode — encourage target-language use
 
 ### Step 2: Proficiency Detection & Adjustment
 
-**Auto-detection** (when no level argument provided):
-- Analyze the user's vocabulary range, grammar complexity, and error patterns
-- After the first 2-3 messages, settle on a level and mention it once: `"I'm calibrating to [level] level based on your writing."`
-
-**Language Feedback level-specific behavior:**
-
-| Aspect | Beginner | Intermediate | Advanced |
-|---|---|---|---|
-| Corrections | All errors, with full explanations | Grammar precision focus | Subtle errors and nuance only |
-| Translations | Provide liberally | Only for uncommon words | Rarely, only specialized terms |
-| Alternative sentences | Provide full rewritten versions | Provide key phrases | Only for stylistic improvement |
-| Idioms | Introduce simple ones | Actively teach idioms | Focus on register and formality |
-| Feedback language | Mix of target + native language | Mostly target language | Entirely in target language |
+When no level was provided, analyze the user's vocabulary range, grammar complexity, and error patterns. After the first 2-3 messages, settle on a level and mention it once: `"I'm calibrating to [level] level based on your writing."` Apply the level-specific depth tables from the language guide.
 
 ### Step 3: Execute the Actual Request
 
