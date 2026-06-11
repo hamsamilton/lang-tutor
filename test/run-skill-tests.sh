@@ -138,14 +138,14 @@ test_alias() {
 # Unlisted language falls back to generic.md and never creates a new file.
 test_fallback() {
   new_env
-  run_claude "$SKILL Korean English Beginner" || return 1
+  run_claude "$SKILL Swahili English Beginner" || return 1
   assert_read "languages/generic.md" || return 1
-  if [ -e "$SKILL_DIR/languages/korean.md" ]; then
-    echo "  FAIL: a korean.md was created — fallback should never write new guides"
-    rm -f "$SKILL_DIR/languages/korean.md"
+  if [ -e "$SKILL_DIR/languages/swahili.md" ]; then
+    echo "  FAIL: a swahili.md was created — fallback should never write new guides"
+    rm -f "$SKILL_DIR/languages/swahili.md"
     return 1
   fi
-  echo "  ok: no korean.md created"
+  echo "  ok: no swahili.md created"
 }
 
 # Both feedback modes fire on follow-up turns in the same session.

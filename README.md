@@ -47,13 +47,20 @@ Each supported language has a dedicated tutor guide with language-specific error
 |---|---|
 | Chinese (Mandarin) | Character/radical breakdowns, compound words, pinyin, measure words, 了 usage |
 | Japanese | Kanji breakdowns, politeness registers, particles, counters |
+| Korean | Sino-Korean root families, speech levels, particles, two number systems |
 | Spanish | ser/estar, preterite vs. imperfect, subjunctive triggers, false friends |
 | French | Gender agreement, passé composé vs. imparfait, tu/vous register |
 | Italian | essere/avere auxiliaries, preposition contractions, congiuntivo |
 | Portuguese | Brazilian/European variants, contractions, ser/estar/ficar |
 | German | Case system, word order, separable verbs, compound-noun breakdowns |
+| Dutch | de/het, verb-second vs. verb-final order, separable verbs, false friends |
+| Russian | Case system, verbal aspect pairs, root families, mobile stress |
+| Arabic | Root-and-pattern tables, iḍāfa, non-human plural rule, MSA vs. dialects |
+| Hindi | Ergative ने, gender agreement, postpositions, Sanskrit/Persian register layers |
+| Turkish | Vowel harmony, suffix-stack decomposition, var/yok, evidential -miş |
+| Vietnamese | Tones, classifiers, kinship pronouns, compound words |
 
-Any other language (Korean, Arabic, Hindi, ...) works through the generic guide, which provides the same feedback modes without language-specific tailoring.
+Any other language (Swahili, Thai, Greek, ...) works through the generic guide, which provides the same feedback modes without language-specific tailoring.
 
 ## How it works
 
