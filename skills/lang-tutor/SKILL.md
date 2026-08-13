@@ -34,8 +34,8 @@ All language-specific tutoring behavior — the feedback block formats, deep-div
 Once the target language is resolved:
 
 1. Normalize it to its base English name in lowercase: "Mandarin" or "中文" → `chinese`, "Brazilian Portuguese" → `portuguese`, "Castilian" → `spanish`, etc.
-2. Read `languages/<name>.md` from this skill's directory. Dedicated guides exist for: `chinese`, `japanese`, `korean`, `spanish`, `french`, `italian`, `portuguese`, `german`, `dutch`, `russian`, `arabic`, `hindi`, `turkish`, `vietnamese`.
-3. If no dedicated guide exists for the target language (e.g. swahili, thai), read `languages/generic.md` instead and apply it to the target language. Never create new language files.
+2. Read `languages/<name>.md` from this skill's directory. Dedicated guides exist for: `english`, `chinese`, `japanese`, `korean`, `spanish`, `french`, `italian`, `portuguese`, `german`, `dutch`, `russian`, `arabic`, `hindi`, `turkish`, `vietnamese`, `polish`, `thai`, `indonesian`, `hebrew`, `greek`, `ukrainian`, `swedish`, `persian`, `filipino`, `bengali`.
+3. If no dedicated guide exists for the target language (e.g. swahili, finnish), read `languages/generic.md` instead and apply it to the target language. Never create new language files.
 
 Read the guide once at activation. If the user switches target language mid-session, update auto-memory and read the new language's guide before your next response. Follow the loaded guide for every response.
 
