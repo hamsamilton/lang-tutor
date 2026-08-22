@@ -1,87 +1,91 @@
 # Filipino Tutor Guide
 
+Read this together with `_common.md`, which defines the feedback block formats, the universal deep-dive types, and the baseline level tables. This file supplies what is specific to Filipino.
+
+## Conventions
+
 Filipino is the Tagalog-based national language of the Philippines, written in the Latin script. English-Tagalog code-switching ("Taglish") is extremely common and natural in everyday speech — don't over-penalize it as an error, just teach the pure Filipino alternative alongside it.
 
-## Mode 1: Language Feedback *(user wrote in Filipino)*
+## Framework Alignment: a fragmented-standards caveat
 
-Output a **language feedback block**:
+Filipino has **no single dominant proficiency framework** for foreign learners, and it is worth saying so rather than implying one. In use:
 
-```
-> **🗣️ Language Feedback**
-> [feedback content here]
-```
+- The **Komisyon sa Wikang Filipino** sets the language standard domestically, and DepEd's K-12 curriculum sequences it for schoolchildren
+- **CEFR**, adapted by universities offering Filipino as a foreign language
+- **ACTFL**, in North American heritage and foreign-language programs
 
-The feedback block must include whichever of the following are relevant:
-
-**Grammar Corrections**
-- Identify grammar errors in the user's message
-- Show what was wrong, explain briefly why, and provide the corrected version
-- Format: `"[original]" → "[corrected]" — [brief explanation]`
-- Watch especially for: predicate-initial word order (the verb or predicate typically leads, not the subject: "Kumain ako" not "Ako kumain"), the Austronesian focus/trigger system (actor-focus mag-/um- vs. object-focus i-/-in vs. other triggers, and how the focus determines which noun phrase gets marked with ang), correct use of the ang/ng/sa particles marking grammatical role (ang for the focused/topic noun, ng for the non-focused actor or object, sa for location/direction/recipient), pluralization via "mga" before the noun rather than a suffix (mga bata "children," not batas), and the linker na/-ng connecting a modifier to the noun it describes (magandang babae, not maganda babae)
-
-**Idiom & Naturalness Suggestions**
-- If the sentence is grammatically correct but a native speaker would phrase it differently, suggest the more natural phrasing
-- Format: `💡 A native speaker might say: "[natural phrasing]"`
-
-**Vocabulary Translations**
-- If the user mixed in any native-language (English) words, provide the pure Filipino translation, noting that the Taglish version is also perfectly natural
-- Format: `"[English word]" → "[Filipino]"`
-
-**Language Feedback level-specific behavior:**
-
-| Aspect | Beginner | Intermediate | Advanced |
+| Guide level | ≈ CEFR | ≈ ACTFL | Can-do target |
 |---|---|---|---|
-| Corrections | All errors, with full explanations | Focus/trigger and particle precision | Subtle errors and register only |
-| Translations | Provide liberally | Only for uncommon words | Rarely, only specialized terms |
-| Alternative sentences | Provide full rewritten versions | Provide key phrases | Only for stylistic improvement |
-| Idioms | Introduce simple ones | Actively teach idioms | Focus on register and regional usage |
-| Feedback language | Mostly English | Mix of Filipino + English (natural Taglish) | Entirely in Filipino |
+| Beginner | A1-A2 | Novice–Intermediate Low | Predicate-initial order; ang/ng/sa; mga; the linker; actor-focus verbs and aspect |
+| Intermediate | B1-B2 | Intermediate Mid–Advanced Low | **The focus/trigger system**; object and locative focus; pseudo-verbs; full aspect |
+| Advanced | C1-C2 | Advanced Mid–Superior | Rarer triggers; sentence particles; register including po/opo; regional variation |
 
-## Mode 2: Translation & Breakdown *(user wrote in their native language)*
+## Grammar Syllabus
 
-Output a **translation block**:
+The standard sequence. Within each level, earlier items are foundational and should be taught before later ones. This drives both the Grammar Corrections priority in Mode 1 and the Concept Spotlight in Mode 2.
 
-```
-> **🗣️ Translation & Breakdown**
-> [content here]
-```
+- **Beginner (A1-A2)**: **predicate-initial word order** → the **ang / ng / sa** particle system → **mga** for plurals → **the linker na / -ng** → yes/no questions with ba → actor-focus verbs (mag- and -um-) → **aspect rather than tense** (completed, progressive, contemplated) → basic pronouns and demonstratives → po/opo politeness
+- **Intermediate (B1-B2)**: **the focus/trigger system in full** — actor (mag-/-um-), object (-in/i-), locative (-an), benefactive (i-) → how the trigger determines which noun takes ang → aspect marking through infixation and reduplication → pseudo-verbs (gusto, kailangan, ayaw) and their distinctive syntax → enclitic pronoun and particle ordering → existential may/mayroon/wala
+- **Advanced (C1-C2)**: the rarer triggers (instrumental ipang-, causative pa-) → **sentence particles** (na, pa, naman, nga, daw, kasi) and the nuance each carries → formal and literary register → regional variation and non-Tagalog influence
 
-The block must include:
+Add this row to both level tables in `_common.md`:
 
-**Translation**
-- Provide a natural, idiomatic Filipino translation of the user's message
-- If there are multiple valid ways to express it, show the most natural one and note if a Taglish version is also common in casual speech
-
-**Key Vocabulary**
-- Pick exactly 2 words or phrases from the translation that are most useful to learn.
-- Format: `**[Filipino]** — [meaning] · [brief usage note or root word]`
-
-**Rotating Deep-Dive** *(pick exactly ONE per response — never show more than one)*
-
-Choose whichever feels most relevant and fresh given what has already been covered in the conversation. Avoid repeating the same type back-to-back; vary naturally based on what would be most interesting or useful at this point in the session.
-
-- **Concept Spotlight**: Highlight one grammar concept, structural pattern, or cultural nuance from the translation relevant to the user's level.
-  - **Beginner**: predicate-initial word order, mga for plurals, basic ang/ng/sa particles, yes/no questions with ba
-  - **Intermediate**: the actor-focus vs. object-focus trigger system, aspect marking (completed/contemplated/progressive via infix and reduplication, not tense), linker na/-ng
-  - **Advanced**: the full range of focus triggers (locative i-, benefactive i-, instrumental ipang-), sentence particles (na, pa, naman, nga, po/opo for politeness), regional and register variation
-
-- **Verb Focus Family**: Take one root word from the translation and show it conjugated across 2-3 different focus/trigger forms (e.g. root bili "buy": bumili "actor-focus, bought," binili "object-focus, was bought," bilhan "locative/beneficiary-focus, bought from/for"), with a note on how the noun phrase marked by ang shifts to match whichever participant is in focus.
-
-- **Ang/Ng/Sa Particle**: Take a short sentence from the translation and label each particle explicitly, showing which noun it marks and why (e.g. "Binili ng lalaki ang tinapay sa tindahan" — ng lalaki = the actor/doer, ang tinapay = the focused object, sa tindahan = the location).
-
-**Translation & Breakdown level-specific depth:**
-
-| Aspect | Beginner | Intermediate | Advanced |
+| Aspect | Beginner (A1-A2) | Intermediate (B1-B2) | Advanced (C1-C2) |
 |---|---|---|---|
-| Translation style | Simple, literal-leaning | Natural and idiomatic | Multiple registers offered |
-| Vocabulary picks | High-frequency essentials | Useful collocations & phrases | Nuanced synonyms, regional pairs |
-| Deep-dive | One basic point with full explanation | Focus/trigger family or particle set with examples | Rarer triggers or particle nuance |
-| Explanation language | English | Mostly English | Mix of both, leaning English |
+| Grammar focus | predicate-initial order, ang/ng/sa, mga, linker na/-ng, ba, actor-focus verbs, aspect, po/opo | full focus/trigger system, object & locative focus, aspect morphology, pseudo-verbs, enclitic order, may/wala | rarer triggers, sentence particles, formal register, regional variation |
+
+## Irregulars to Prioritize
+
+Feeds the Irregularity Watch in `_common.md`. Filipino verb morphology is largely regular, but it is regular in a way English gives no preparation for — **infixation and reduplication rather than endings** — so learners often read a systematic pattern as chaos. Name the mechanism and it resolves.
+
+**Class irregular** — teach the class, not the word:
+- **The -um- infix goes *inside* the root**, after its first consonant: bili → b**um**ili, kain → k**um**ain, alis → **um**alis (vowel-initial roots take it in front). Fully regular, but invisible to anyone expecting a prefix.
+- **Aspect is marked by reduplicating the first syllable**, combined with the focus affix — one root gives the whole aspect set:
+
+  | Aspect | Actor focus (bili) | Object focus (bili) |
+  |---|---|---|
+  | Infinitive | bumili | bilhin |
+  | Completed | bumili | binili |
+  | Progressive | bumibili | binibili |
+  | Contemplated | bibili | bibilhin |
+
+- **The linker is phonologically determined**: **-ng** attaches after a vowel (maganda**ng** bahay), **na** stands separately after a consonant (mahal **na** bahay). A rule, not a choice.
+- **Vowel loss before -in and -an** affects a predictable group of two-syllable roots: bili → bilhin, dala → dalhin, bigay → bigyan, sabi → sabihin. The final vowel drops and the consonant shifts to the ending.
+
+**Locally irregular** — name where it's safe:
+- Once the **root** and the **focus affix** are known, the aspect forms are mechanical. Irregularity, where it exists, lives in the root's interaction with -in/-an, not in the aspect system — so the learner can be told which slot to watch.
+- Filipino verbs do **not** inflect for person or number. The pronoun carries that entirely, so no agreement to get wrong.
+
+**Fully irregular** — must be memorized:
+- **kuha → kunin** (not *kuhain) — the most irregular common verb, with the root reshaping entirely
+- Suppletive and stem-changing forms in high-frequency verbs: punta → pumunta but *puntahan*; kain → kumain but *kainin*; and the irregular *nasa* / *may* / *mayroon* existential set
+- **Focus affix membership is per-verb**: some roots take mag-, others -um-, a few take either with a meaning difference (magluto vs. lumuto). The choice is not derivable — give the affix with the root.
+- **Enclitic ordering** is a fixed sequence (monosyllabic particles before disyllabic; pronouns in a set order — *Nakita ko na siya*, never *Nakita na ko siya* in careful speech), and errors here sound distinctly foreign
+
+**By level**: at A1-A2 prioritize the linker rule and the focus affix of each new verb; at B1-B2 the -in/-an vowel loss and enclitic ordering; at C1-C2 particle nuance and rarer triggers.
+
+## Error Categories to Watch For
+
+In Mode 1 Grammar Corrections, prioritize: predicate-initial word order ("Kumain ako," not "Ako kumain"), **the focus/trigger system** and whether the ang-marked noun matches the verb's affix, correct ang/ng/sa particle use, pluralization via mga rather than a suffix, and the linker na/-ng connecting modifier to noun.
+
+## Additional Deep-Dive Types
+
+These join the rotation alongside Concept Spotlight and Word Family from `_common.md`.
+
+> **Note on conjugation tables**: the person-based table in `_common.md` does **not** apply — Filipino verbs inflect for focus and aspect, never for person. Use the Verb Focus Family and the aspect grid below instead.
+
+- **Verb Focus Family**: Take one root from the translation and show it across 2-3 focus/trigger forms — e.g. root *bili* "buy": **bumili** (actor-focus, "bought"), **binili** (object-focus, "was bought"), **bilhan** (locative/benefactive, "bought from/for") — with a note on how the ang-marked noun shifts to match whichever participant is in focus. This is the highest-value Filipino deep-dive; favor it at intermediate level.
+
+- **Aspect Grid**: Pick one verb from the translation and show its four aspect forms in one focus (infinitive / completed / progressive / contemplated), marking where the reduplication and infix appear. Close with one line naming which focus affix the root takes and one more root that behaves the same way.
+
+- **Ang/Ng/Sa Particle**: Take a short sentence from the translation and label each particle explicitly, showing which noun it marks and why — e.g. *"Binili ng lalaki ang tinapay sa tindahan"*: ng lalaki = the actor, ang tinapay = the focused object, sa tindahan = the location.
 
 ## Watch-outs
 
-- **Focus/trigger system**: this is the single hardest concept for English speakers — the verb affix (mag-/um-, i-, -in, -an, ipang-, etc.) determines *which participant* (actor, object, location, beneficiary) is marked with ang, not a fixed subject-verb-object frame; correct mismatches between the affix and the ang-marked noun explicitly
-- **Predicate-initial order**: Filipino typically leads with the verb or predicate ("Masaya ako" happy I = "I am happy," not "Ako masaya"); flag English-order sentences as unnatural even if technically parseable
-- **Ang vs. ng vs. sa confusion**: using ng where ang belongs (or vice versa) silently changes who or what the sentence is about — treat particle choice as core grammar, not style
-- **Mga for plurals**: there's no plural suffix; "mga bata" (children) not "batas" — flag any attempt to pluralize a noun by suffix
-- **Missing linker na/-ng**: modifiers must be linked to their noun (magandang bahay "beautiful house," maraming tao "many people") — a dropped linker is one of the most common beginner errors
+- **Focus/trigger system**: the single hardest concept for English speakers — the verb affix determines *which participant* is marked with ang, not a fixed SVO frame; correct mismatches between affix and ang-marked noun explicitly
+- **Predicate-initial order**: Filipino leads with the verb or predicate ("Masaya ako") — flag English-order sentences as unnatural even if parseable
+- **Ang vs. ng vs. sa confusion**: using ng where ang belongs silently changes what the sentence is about — treat particle choice as core grammar, not style
+- **Mga for plurals**: there's no plural suffix — flag any attempt to pluralize by suffix
+- **Missing linker na/-ng**: modifiers must be linked to their noun (magandang bahay, maraming tao) — a dropped linker is among the most common beginner errors, and the vowel/consonant rule should be given rather than the corrected form
+- **Focus affix per verb**: never introduce a verb without saying whether it takes mag- or -um- — the learner cannot infer it
+- **Po/opo**: politeness markers are socially significant, not decorative; omitting po when addressing an elder reads as disrespectful rather than merely casual

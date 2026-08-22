@@ -1,88 +1,84 @@
 # Italian Tutor Guide
 
+Read this together with `_common.md`, which defines the feedback block formats, the universal deep-dive types, and the baseline level tables. This file supplies what is specific to Italian.
+
+## Conventions
+
 Default to standard Italian. Note tu/Lei register on translations where the choice matters.
 
-## Mode 1: Language Feedback *(user wrote in Italian)*
+## Framework Alignment: CEFR / CILS / CELI
 
-Output a **language feedback block**:
+Italian certification is split across several CEFR-aligned bodies — CILS (Università per Stranieri di Siena), CELI (Università per Stranieri di Perugia), and PLIDA (Società Dante Alighieri). All map one-to-one onto CEFR, so use CEFR as the reference:
 
-```
-> **🗣️ Language Feedback**
-> [feedback content here]
-```
-
-The feedback block must include whichever of the following are relevant:
-
-**Grammar Corrections**
-- Identify grammar errors in the user's message
-- Show what was wrong, explain briefly why, and provide the corrected version
-- Format: `"[original]" → "[corrected]" — [brief explanation]`
-- Watch especially for: essere vs. avere auxiliaries in passato prossimo, preposition+article contractions (del, alla, nei, sugli), gender/number agreement, irregular verbs (andare, fare, dire, dare), missed congiuntivo triggers (penso che, è importante che)
-
-**Idiom & Naturalness Suggestions**
-- If the sentence is grammatically correct but a native speaker would phrase it differently, suggest the more natural phrasing
-- Format: `💡 A native speaker might say: "[natural phrasing]"`
-
-**Vocabulary Translations**
-- If the user mixed in any native-language words, provide the Italian translation
-- Format: `"[native word]" → "[Italian word]"`
-- Flag false friends when they appear: *eventualmente* (possibly, not eventually), *fattoria* (farm, not factory), *parente* (relative, not parent), *attualmente* (currently)
-
-**Language Feedback level-specific behavior:**
-
-| Aspect | Beginner | Intermediate | Advanced |
+| Guide level | CEFR | Certificates | Can-do target |
 |---|---|---|---|
-| Corrections | All errors, with full explanations | Auxiliary and agreement precision | Subtle errors and nuance only |
-| Translations | Provide liberally | Only for uncommon words | Rarely, only specialized terms |
-| Alternative sentences | Provide full rewritten versions | Provide key phrases | Only for stylistic improvement |
-| Idioms | Introduce simple ones | Actively teach idioms | Focus on register and formality |
-| Feedback language | Mix of Italian + English | Mostly Italian | Entirely in Italian |
+| Beginner | A1-A2 | CILS A1-A2, CELI Impatto/1 | Describe self, family, and routine; handle predictable transactions and simple past narration |
+| Intermediate | B1-B2 | CILS Uno-Due, CELI 2-3 | Narrate and argue in past and future; express opinion and doubt; handle work and study topics fluently |
+| Advanced | C1-C2 | CILS Tre-Quattro, CELI 4-5 | Full mood control; nuanced register; comfortable with idiom, regional variation, and implicit meaning |
 
-## Mode 2: Translation & Breakdown *(user wrote in their native language)*
+## Grammar Syllabus
 
-Output a **translation block**:
+Standard CEFR-aligned Italian sequencing. Within each level, earlier items are foundational and should be taught before later ones. This drives both the Grammar Corrections priority in Mode 1 and the Concept Spotlight in Mode 2.
 
-```
-> **🗣️ Translation & Breakdown**
-> [content here]
-```
+- **Beginner (A1-A2)**: gender & articles (including *lo/gli* before s+consonant, z, ps, gn) → **preposition + article contractions** (del, alla, nei, sugli) → present indicative by conjugation class (-are/-ere/-ire, plus -isc- verbs) → essere vs. avere → adjective agreement and position → **passato prossimo and auxiliary choice** → imperfetto → piacere-type verbs
+- **Intermediate (B1-B2)**: passato prossimo vs. imperfetto contrast → past participle agreement with essere and with preceding direct-object pronouns → direct/indirect object pronouns, combined forms (*me lo*, *glielo*) → the particles **ci** and **ne** → futuro semplice & condizionale → **congiuntivo and its triggers** (penso che, è importante che, benché) → periodo ipotetico (si clauses) → trapassato prossimo
+- **Advanced (C1-C2)**: congiuntivo across all four tenses and *concordanza dei tempi* → mixed hypothetical periods → *passato remoto* (essential in southern speech and in writing, not merely literary) → pronominal verbs (*farcela*, *andarsene*, *cavarsela*) → discourse markers (tuttavia, anzi, peraltro) → register and regional variation
 
-The block must include:
+Add this row to both level tables in `_common.md`:
 
-**Translation**
-- Provide a natural, idiomatic Italian translation of the user's message
-- If there are multiple valid ways to express it, show the most natural one and note its register (tu/Lei) when relevant
-
-**Key Vocabulary**
-- Pick exactly 2 words or phrases from the translation that are most useful to learn
-- Format: `**[Italian word/phrase]** — [meaning] · [brief usage note or context]`
-
-**Rotating Deep-Dive** *(pick exactly ONE per response — never show more than one)*
-
-Choose whichever feels most relevant and fresh given what has already been covered in the conversation. Avoid repeating the same type back-to-back; vary naturally based on what would be most interesting or useful at this point in the session.
-
-- **Concept Spotlight**: Highlight one grammar concept, structural pattern, or cultural nuance from the translation relevant to the user's level.
-  - **Beginner**: gender and articles, present-tense conjugation patterns (-are/-ere/-ire), preposition+article contractions, cognate patterns (-zione → -tion, -tà → -ty)
-  - **Intermediate**: passato prossimo vs. imperfetto, essere/avere auxiliary choice, object pronouns and their placement, piacere-type verbs
-  - **Advanced**: congiuntivo nuance, register, regional variation, idiomatic and literary constructions
-
-- **Word Family**: Pick one word from the Key Vocabulary and show 2-3 related words — verb/noun/adjective derivations (e.g. *lavorare → lavoro → lavoratore*) or an English cognate chain — with a note on how meaning shifts.
-
-- **Contraction Corner**: If the translation contains a preposition+article contraction (del, alla, nei...), unpack it into its parts and show the pattern with one more example.
-
-**Translation & Breakdown level-specific depth:**
-
-| Aspect | Beginner | Intermediate | Advanced |
+| Aspect | Beginner (A1-A2) | Intermediate (B1-B2) | Advanced (C1-C2) |
 |---|---|---|---|
-| Translation style | Simple, literal-leaning | Natural and idiomatic | Multiple registers offered |
-| Vocabulary picks | High-frequency essentials | Useful collocations & phrases | Nuanced synonyms, formal/informal pairs |
-| Deep-dive | One basic grammar point with full explanation | Pattern or idiom with examples | Subtle distinction or stylistic choice |
-| Explanation language | English | Mostly English | Mix of both, leaning English |
+| Grammar focus (CEFR) | gender/articles, contractions, present indicative by class, essere/avere, passato prossimo, imperfetto, piacere | prossimo vs. imperfetto, participle agreement, combined pronouns, ci/ne, futuro/condizionale, congiuntivo | congiuntivo sequence, mixed hypotheticals, passato remoto, pronominal verbs, register |
+
+## Error Categories to Watch For
+
+In Mode 1 Grammar Corrections, prioritize: essere vs. avere auxiliaries in passato prossimo, preposition+article contractions (del, alla, nei, sugli), gender/number agreement, irregular verbs (andare, fare, dire, dare), missed congiuntivo triggers (penso che, è importante che), misuse or omission of *ci* and *ne*.
+
+In Vocabulary Translations, flag false friends proactively: *eventualmente* (possibly, not eventually), *fattoria* (farm, not factory), *parente* (relative, not parent), *attualmente* (currently), *libreria* (bookshop), *camera* (room).
+
+## Irregulars to Prioritize
+
+Feeds the Irregularity Watch in `_common.md`.
+
+**Class irregular** — teach the class, not the word:
+- **-isc- verbs**: *finire → finisco*, *capire → capisco*, *preferire → preferisco*. A large class of -ire verbs taking -isc- in the singular and 3pl. Invisible from the infinitive, so learners must be told which class a verb belongs to — this is the most-regularized error in Italian.
+- **-care / -gare verbs** insert an *h* to keep the hard sound (*cercare → cerchi*, *pagare → paghi*); **-ciare / -giare** drop the *i* (*cominciare → cominci*) — orthographic only
+- **Verb families**: *porre* governs *comporre, proporre, supporre*; *durre* governs *produrre, tradurre, condurre*; *trarre* governs *attrarre, distrarre*. These derive from Latin infinitives, which is why their stems look nothing like the infinitive (*produrre → produco*).
+
+**Locally irregular** — name where it's safe:
+- **The imperfetto is nearly perfectly regular** — only *essere (ero)* is truly irregular; *fare (facevo)*, *dire (dicevo)*, *bere (bevevo)* just use their Latin stems consistently. Reassuring and worth stating.
+- Many verbs are irregular **only in the passato remoto and past participle** — the *io/lui/loro* forms change stem while *tu/noi/voi* stay regular (*prendere → presi, prendesti, prese*). This 1-3-6 alternation is itself a pattern; name it.
+
+**Fully irregular** — must be memorized:
+- *essere*, *avere*, *andare*, *fare*, *dare*, *stare*, *dire*, *venire*, *uscire*, *bere*
+- Irregular past participles: *fatto, detto, letto, scritto, visto, preso, messo, chiuso, aperto, offerto, rimasto, successo*
+- Irregular comparatives: *buono → migliore*, *cattivo → peggiore*, *grande → maggiore*, *piccolo → minore* (the regular *più buono* also exists with a different nuance — worth noting)
+- **Irregular gender and plurals**: *il problema, il tema, il poeta* (masculine despite -a); *la mano* (feminine despite -o); *l'uovo → le uova*, *il braccio → le braccia* (masculine singular, feminine plural — a genuine Latin-neuter leftover)
+
+**By level**: at A1-A2 prioritize *essere/avere/andare/fare/stare*, the -isc- class, and the masculine -a nouns; at B1-B2 irregular participles and auxiliary selection; at C1-C2 passato remoto stems and the *-porre/-durre/-trarre* families.
+
+## Additional Deep-Dive Types
+
+These join the rotation alongside Concept Spotlight and Word Family from `_common.md`.
+
+- **Conjugation Table**: Use the table format and level scaling defined in `_common.md`, with these Italian specifics:
+  - **Persons**: full 6 (io / tu / lui-lei-Lei / noi / voi / loro). Note that subject pronouns are normally dropped — the ending carries the person — so present the forms without pronouns once the user is past A1.
+  - **Beginner (A1-A2)**: present indicative by class (-are / -ere / -ire, and separately the -isc- pattern of *finire* / *capire*, which surprises learners); then passato prossimo showing auxiliary choice and participle agreement
+  - **Intermediate (B1-B2)**: passato prossimo vs. imperfetto side by side; then indicative vs. congiuntivo for a trigger verb; futuro vs. condizionale (shared stem, contrasting endings)
+  - **Advanced (C1-C2)**: congiuntivo presente / imperfetto / passato / trapassato for *concordanza dei tempi*, or passato remoto alongside passato prossimo
+  - **Pattern line**: name the class (-are, -ere, -ire, -ire with -isc-) or the irregularity, and give one verb from the same class
+
+- **Contraction Corner**: If the translation contains a preposition+article contraction (del, alla, nei…), unpack it into its parts and show the pattern with one more example.
+
+For the Italian **Word Family** deep-dive specifically, favor verb/noun/adjective derivations (*lavorare → lavoro → lavoratore*) or English cognate chains with their sound-correspondence rule (-zione → -tion, -tà → -ty).
 
 ## Watch-outs
 
 - **Essere vs. avere**: the top passato prossimo error — name the rule briefly (motion/state verbs take essere, and the participle agrees)
 - **Contractions**: English speakers write *di il* or *a la* — always show the contracted form (del, alla)
 - **Piacere logic**: "mi piace" inverts English subject/object — re-explain whenever a liking-verb error appears
-- **False friends**: *eventualmente*, *fattoria*, *parente*, *libreria* (bookshop), *camera* (room) — call out proactively
+- **False friends**: *eventualmente*, *fattoria*, *parente*, *libreria*, *camera* — call out proactively
 - **Double consonants**: meaning-changing pairs (pena/penna, casa/cassa) deserve a quick note when one appears in vocabulary
+- **The -isc- verbs**: *finire → finisco*, *capire → capisco* — learners regularize these to *fino*/*capo*; correct as a class, not a one-off
+- **Ci and ne**: English has no equivalent, so learners simply omit them (*ne voglio due*, *ci penso io*) — introduce them as fillable slots rather than translatable words
+- **Congiuntivo avoidance**: educated Italian still requires it after opinion and doubt verbs; using the indicative after *penso che* is the clearest intermediate tell

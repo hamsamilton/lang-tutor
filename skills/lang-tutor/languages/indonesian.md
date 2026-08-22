@@ -1,86 +1,90 @@
 # Indonesian Tutor Guide
 
+Read this together with `_common.md`, which defines the feedback block formats, the universal deep-dive types, and the baseline level tables. This file supplies what is specific to Indonesian.
+
+## Conventions
+
 Indonesian (Bahasa Indonesia) uses the Latin script and is largely agglutinative, building meaning through prefixes and suffixes attached to root words; default to standard Indonesian, mentioning Malay variant differences only when relevant.
 
-## Mode 1: Language Feedback *(user wrote in Indonesian)*
+## Framework Alignment: BIPA / UKBI / CEFR
 
-Output a **language feedback block**:
+Indonesian teaching for foreigners runs through **BIPA** (Bahasa Indonesia untuk Penutur Asing), whose seven levels the Ministry of Education maps onto CEFR. The native-speaker standard **UKBI** also exists but is calibrated for Indonesians, so BIPA is the right reference for a learner:
 
-```
-> **🗣️ Language Feedback**
-> [feedback content here]
-```
-
-The feedback block must include whichever of the following are relevant:
-
-**Grammar Corrections**
-- Identify grammar errors in the user's message
-- Show what was wrong, explain briefly why, and provide the corrected version
-- Format: `"[original]" → "[corrected]" — [brief explanation]`
-- Watch especially for: the verb affixation system (*me-*, *di-*, *ber-*, *ter-*, *-kan*, *-i* and how they shift meaning or voice, e.g. *makan* → *memakan* → *dimakan*), lack of tense marking (relying on time words and aspect markers *sudah*, *sedang*, *akan* instead of conjugation), reduplication for plurals or intensity (*rumah-rumah*, *cepat-cepat*), classifier-like counting words (*dua ekor kucing*, *tiga buah meja*), active vs. passive voice choice (*me-* prefix for agent-focus vs. *di-* prefix for patient-focus), affix dropping in casual/colloquial speech (*nggak tau* vs. *tidak tahu*)
-
-**Idiom & Naturalness Suggestions**
-- If the sentence is grammatically correct but a native speaker would phrase it differently, suggest the more natural phrasing
-- Format: `💡 A native speaker might say: "[natural phrasing]"`
-
-**Vocabulary Translations**
-- If the user mixed in any native-language words, provide the Indonesian translation
-- Format: `"[native word]" → "[Indonesian word]"`
-- Flag false friends when they appear: *supply* looks like *suplai* but everyday Indonesian prefers *pasokan*; *actual* vs. *aktual* (means "current/topical," not "real"); *sensitive* vs. *sensitif* (used more narrowly than English "sensitive")
-
-**Language Feedback level-specific behavior:**
-
-| Aspect | Beginner | Intermediate | Advanced |
+| Guide level | BIPA | ≈ CEFR | Can-do target |
 |---|---|---|---|
-| Corrections | All errors, with full explanations | Affix choice and voice precision | Subtle errors and register only |
-| Translations | Provide liberally | Only for uncommon words | Rarely, only specialized terms |
-| Alternative sentences | Provide full rewritten versions | Provide key phrases | Only for stylistic improvement |
-| Idioms | Introduce simple ones | Actively teach idioms | Focus on register and regional usage |
-| Feedback language | Mix of Indonesian + English | Mostly Indonesian | Entirely in Indonesian |
+| Beginner | BIPA 1-2 | A1-A2 | SVO; time markers instead of tense; possessive order; simple me- verbs; classifiers |
+| Intermediate | BIPA 3-5 | B1-B2 | me-/di- voice choice; the -kan/-i contrast; nasal assimilation; reduplication; yang clauses |
+| Advanced | BIPA 6-7 | C1-C2 | ter- nuance; pronoun clitics; formal and journalistic register; Malay divergence |
 
-## Mode 2: Translation & Breakdown *(user wrote in their native language)*
+## Grammar Syllabus
 
-Output a **translation block**:
+The standard BIPA sequence. Within each level, earlier items are foundational and should be taught before later ones. This drives both the Grammar Corrections priority in Mode 1 and the Concept Spotlight in Mode 2.
 
-```
-> **🗣️ Translation & Breakdown**
-> [content here]
-```
+- **Beginner (BIPA 1-2)**: SVO word order → **no tense marking** — time words and aspect markers instead (sudah, sedang, akan, belum) → **possessive order** (noun then owner: rumah saya) → modifiers follow the noun → **reduplication for plurality** → counting words (dua ekor kucing, tiga buah meja) → negation tidak vs. bukan → simple me- verbs
+- **Intermediate (BIPA 3-5)**: **the me-/di- voice choice** (agent-focus vs. patient-focus) → **nasal assimilation in me-** → the **-kan vs. -i** suffix contrast → ber- and ter- prefixes → pe-/-an nominalization → relative clauses with yang → comparison → formal vs. colloquial forms
+- **Advanced (BIPA 6-7)**: ter- for accidental/involuntary and superlative meaning → passive with pronoun clitics (ku-, kau-) → nominal and journalistic style → register range from formal written to Jakarta colloquial → regional and Malay lexical divergence
 
-The block must include:
+Add this row to both level tables in `_common.md`:
 
-**Translation**
-- Provide a natural, idiomatic Indonesian translation of the user's message
-- If there are multiple valid ways to express it, show the most natural one
-
-**Key Vocabulary**
-- Pick exactly 2 words or phrases from the translation that are most useful to learn
-- Format: `**[Indonesian word/phrase]** — [meaning] · [brief usage note or context]`
-
-**Rotating Deep-Dive** *(pick exactly ONE per response — never show more than one)*
-
-Choose whichever feels most relevant and fresh given what has already been covered in the conversation. Avoid repeating the same type back-to-back; vary naturally based on what would be most interesting or useful at this point in the session.
-
-- **Concept Spotlight**: Highlight one grammar concept, structural pattern, or cultural nuance from the translation relevant to the user's level.
-  - **Beginner**: word order (SVO, no conjugation), basic time markers (*sudah*, *sedang*, *akan*), possessive order (noun + owner, e.g. *rumah saya*), simple *me-* verbs
-  - **Intermediate**: *me-* vs. *di-* voice choice, *-kan* vs. *-i* suffix contrast, reduplication patterns, classifier words (*ekor*, *buah*, *orang*)
-  - **Advanced**: *ter-* for accidental/involuntary or superlative meaning, formal vs. colloquial register (*tidak* vs. *nggak/gak*), passive constructions with pronoun clitics (*ku-*, *kau-*), regional/Malay lexical divergence
-- **Affix Family**: Take one root word from the Key Vocabulary and show 2-3 affixed derivations, noting how each affix shifts meaning or voice — e.g. *ajar* (root: teach) → *mengajar* (to teach, active) → *diajar* (to be taught, passive) → *pelajaran* (lesson, noun form) → *pelajar* (student, agent noun)
-- **Reduplication Spotlight**: Highlight a reduplicated form in the translation and explain its function — full reduplication for plurality (*buku-buku* = books), intensity or repetition (*cepat-cepat* = quickly/hurriedly), or lexicalized meaning shift (*mata-mata* = spy, not "eyes-eyes")
-
-**Translation & Breakdown level-specific depth:**
-
-| Aspect | Beginner | Intermediate | Advanced |
+| Aspect | Beginner (BIPA 1-2) | Intermediate (BIPA 3-5) | Advanced (BIPA 6-7) |
 |---|---|---|---|
-| Translation style | Simple, literal-leaning | Natural and idiomatic | Multiple registers offered |
-| Vocabulary picks | High-frequency essentials | Useful collocations & phrases | Nuanced synonyms, formal/informal pairs |
-| Deep-dive | One basic grammar point with full explanation | Pattern or affix family with examples | Subtle distinction or register choice |
-| Explanation language | English | Mostly English | Mix of both, leaning English |
+| Grammar focus (BIPA) | SVO, time markers, possessive order, reduplication, counting words, tidak/bukan, simple me- verbs | me-/di- voice, nasal assimilation, -kan vs. -i, ber-/ter-, pe-/-an nominalization, yang | ter- nuance, pronoun clitics, nominal style, register range, Malay divergence |
+
+## Irregulars to Prioritize
+
+Feeds the Irregularity Watch in `_common.md`. Indonesian is often called one of the easiest languages for English speakers, and for good reason: **no tense, no gender, no case, no agreement, no articles, and words that never change for person or number.** Say this early. The irregularity that remains is almost entirely one phonological rule plus a few arbitrary pairings.
+
+**Class irregular** — teach the class, not the word:
+- **Nasal assimilation in the me- prefix** is the single rule worth knowing, and it is fully systematic. The prefix changes shape to match the root's first consonant, and for four consonants that consonant then **disappears**:
+
+  | Root begins with | Prefix becomes | Root consonant | Example |
+  |---|---|---|---|
+  | p | mem- | **drops** | pukul → memukul |
+  | t | men- | **drops** | tulis → menulis |
+  | k | meng- | **drops** | kirim → mengirim |
+  | s | meny- | **drops** | sewa → menyewa |
+  | b, f | mem- | kept | baca → membaca |
+  | d, j, c | men- | kept | dengar → mendengar |
+  | g, h, vowel | meng- | kept | gambar → menggambar |
+  | l, m, n, r, w, y | me- | kept | lihat → melihat |
+
+  When a learner writes *memukul* as *mempukul*, give the rule rather than the form. The same assimilation governs the pe- prefix.
+- **Reduplication** has three distinct functions — plurality (buku-buku), intensity or manner (cepat-cepat), and lexicalized meaning shift. Name which one is at work.
+- **Colloquial forms are systematic**, not sloppy: tidak → nggak/gak, tahu → tau, bagaimana → gimana, sudah → udah. Teach the mapping so the learner can follow real speech.
+
+**Locally irregular** — name where it's safe:
+- Indonesian verbs never inflect for person, number, or tense. Any irregularity is in the **prefix**, never in the ending. The root itself is stable and always recoverable — tell the learner to strip affixes back to the root when reading an unfamiliar word.
+
+**Fully irregular** — must be memorized:
+- **Assimilation exceptions in loanwords**: borrowed roots often keep their initial consonant against the rule — memproduksi (not *memroduksi), memproses, mengkritik. Membership must be learned per word.
+- **Lexicalized reduplications** whose meaning is not the sum of their parts: mata-mata (spy, not "eyes"), orang-orang**an** (scarecrow), kupu-kupu (butterfly — no un-reduplicated root exists), laba-laba (spider)
+- **Counting words** are arbitrary per noun: ekor for animals, buah for objects and fruit, orang for people, batang for stick-like things, lembar for sheets. Give the counter with a new noun.
+- **The -kan / -i distinction** resists a clean rule — broadly -kan is causative or benefactive and -i is locative or repetitive, but many verb pairs simply must be learned (mengirimkan vs. mengirimi)
+
+**By level**: at BIPA 1-2 prioritize the counting word for each new noun and the tidak/bukan split; at BIPA 3-5 nasal assimilation and the -kan/-i pairs; at BIPA 6-7 loanword exceptions and register mapping.
+
+## Error Categories to Watch For
+
+In Mode 1 Grammar Corrections, prioritize: the verb affixation system (me-, di-, ber-, ter-, -kan, -i and how they shift meaning or voice), missing time markers where tense is ambiguous, reduplication for plurals or intensity, counting words, active vs. passive voice choice, and affix dropping in colloquial speech.
+
+In Vocabulary Translations, flag false friends: *aktual* (current/topical, not "real"), *sensitif* (narrower than English "sensitive"), and note where everyday Indonesian prefers a native word (*pasokan*) over a borrowing (*suplai*).
+
+## Additional Deep-Dive Types
+
+These join the rotation alongside Concept Spotlight and Word Family from `_common.md`.
+
+> **Note on conjugation tables**: the conjugation table in `_common.md` does **not** apply — Indonesian verbs do not inflect for person, number, or tense. The Affix Family below takes its place as the verb-morphology deep-dive.
+
+- **Affix Family**: Take one root word from the Key Vocabulary and show 2-3 affixed derivations, noting how each affix shifts meaning or voice — e.g. *ajar* (root: teach) → *mengajar* (to teach, active) → *diajar* (to be taught, passive) → *pelajaran* (lesson) → *pelajar* (student). **Name the nasal assimilation** wherever it fires; this is the highest-value Indonesian deep-dive.
+
+- **Reduplication Spotlight**: Highlight a reduplicated form in the translation and explain its function — plurality (*buku-buku*), intensity or manner (*cepat-cepat*), or lexicalized shift (*mata-mata* = spy).
 
 ## Watch-outs
 
-- **Affix confusion**: English speakers drop or misapply *me-/di-/ber-/ter-/-kan/-i*; correct with the root word and a one-line note on what the affix contributes (voice, causation, direction)
-- **Missing time markers**: since verbs don't conjugate for tense, learners forget *sudah* (already), *sedang* (currently), *akan* (will) — flag when time is ambiguous without one
-- **Passive voice underuse**: English speakers overuse *me-* active constructions where a native speaker would naturally use *di-* passive, especially when the agent is unknown or unimportant
-- **Reduplication omission**: learners use a bare singular noun to mean "many" instead of reduplicating (*buku* vs. *buku-buku*), or fail to recognize lexicalized reduplications as single vocabulary items
-- **Formal/colloquial mixing**: mixing textbook forms (*tidak*, *tahu*) with casual contractions (*nggak*, *tau*, *gimana*) inconsistently within one register — flag and note which register fits the context
+- **Affix confusion**: English speakers drop or misapply me-/di-/ber-/ter-/-kan/-i; correct with the root word and a one-line note on what the affix contributes
+- **Missing time markers**: since verbs don't conjugate, learners forget sudah / sedang / akan — flag when time is ambiguous without one
+- **Passive voice underuse**: English speakers overuse me- active where a native would use di- passive, especially when the agent is unknown or unimportant
+- **Reduplication omission**: a bare singular noun where "many" is meant, or failure to recognize lexicalized reduplications as single vocabulary items
+- **Formal/colloquial mixing**: textbook forms (tidak, tahu) mixed inconsistently with contractions (nggak, tau, gimana) — flag and note which register fits
+- **Nasal assimilation**: give the rule, not the corrected form — the learner will face the same choice on the next verb
+- **tidak vs. bukan**: tidak negates verbs and adjectives, bukan negates nouns — a small, high-frequency distinction English collapses entirely

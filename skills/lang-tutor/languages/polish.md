@@ -1,88 +1,87 @@
 # Polish Tutor Guide
 
+Read this together with `_common.md`, which defines the feedback block formats, the universal deep-dive types, and the baseline level tables. This file supplies what is specific to Polish.
+
+## Conventions
+
 Default to standard Polish (ogólnopolski); note that Polish spelling is largely phonetic but distinguishes look-alike sounds in writing (ó/u, rz/ż, h/ch) that are pronounced identically — flag these when relevant.
 
-## Mode 1: Language Feedback *(user wrote in Polish)*
+## Framework Alignment: CEFR / Państwowy Egzamin Certyfikatowy
 
-Output a **language feedback block**:
+Polish is certified by the state examination board (PKdsPZJPjO) on a one-to-one CEFR mapping:
 
-```
-> **🗣️ Language Feedback**
-> [feedback content here]
-```
+| Guide level | CEFR | Can-do target |
+|---|---|---|
+| Beginner | A1-A2 | Survival conversation, self and routine; three or four cases in practice; present and simple past |
+| Intermediate | B1-B2 | Study and work situations; full seven-case system; aspect under control; virile agreement |
+| Advanced | C1-C2 | Professional and academic register; participles, aspect nuance in narrative, stylistic range |
 
-The feedback block must include whichever of the following are relevant:
+B1 is the level required for Polish citizenship, which is a useful anchor if the user has a concrete goal.
 
-**Grammar Corrections**
-- Identify grammar errors in the user's message
-- Show what was wrong, explain briefly why, and provide the corrected version
-- Format: `"[original]" → "[corrected]" — [brief explanation]`
-- Watch especially for: case selection across the 7-case system (especially genitive after negation and quantities, instrumental with narzędnik verbs like *interesować się*), aspect pairs (perfective/imperfective, e.g. *robić/zrobić*), gender agreement including the virile vs. non-virile split in plural adjectives/verbs (*dobrzy studenci* vs. *dobre studentki*), verb-of-motion pairs (*iść/chodzić*, *jechać/jeździć*), and free word order used for emphasis rather than English's fixed SVO
+## Grammar Syllabus
 
-**Idiom & Naturalness Suggestions**
-- If the sentence is grammatically correct but a native speaker would phrase it differently, suggest the more natural phrasing
-- Format: `💡 A native speaker might say: "[natural phrasing]"`
+The standard CEFR-aligned sequence. Within each level, earlier items are foundational and should be taught before later ones. This drives both the Grammar Corrections priority in Mode 1 and the Concept Spotlight in Mode 2.
 
-**Vocabulary Translations**
-- If the user mixed in any native-language words, provide the Polish translation
-- Format: `"[native word]" → "[polskie słowo]"`
-- Flag false friends when they appear: *ordynarny* (vulgar, not ordinary), *pensja* (salary, not pension), *dywan* (carpet, not divan), *aktualny* (current, not actual), *fabryka* (factory, not fabric)
+- **Beginner (A1-A2)**: three genders → no articles → nominative → present tense (the four conjugation patterns) → accusative → **instrumental after *być*** (*Jestem studentem* — surprises English speakers immediately) → locative after w/na → genitive → past tense agreeing by gender → introduction to aspect
+- **Intermediate (B1-B2)**: the full seven cases including vocative → **aspect pairs** → genitive after negation → dative → verbs of motion (iść/chodzić, jechać/jeździć) → **virile vs. non-virile plural agreement** → numerals and their case demands → conditional with *by* → comparatives
+- **Advanced (C1-C2)**: participles (imiesłowy przymiotnikowe i przysłówkowe) → aspect nuance in narrative and in commands → word order as information structure → formal address (Pan/Pani + 3rd person) → register and colloquialism
 
-**Language Feedback level-specific behavior:**
+Add this row to both level tables in `_common.md`:
 
-| Aspect | Beginner | Intermediate | Advanced |
+| Aspect | Beginner (A1-A2) | Intermediate (B1-B2) | Advanced (C1-C2) |
 |---|---|---|---|
-| Corrections | All errors, with full explanations | Case and aspect precision | Subtle errors and nuance only |
-| Translations | Provide liberally | Only for uncommon words | Rarely, only specialized terms |
-| Alternative sentences | Provide full rewritten versions | Provide key phrases | Only for stylistic improvement |
-| Idioms | Introduce simple ones | Actively teach idioms | Focus on register and colloquialisms |
-| Feedback language | Mostly English | Mix of Polish + English | Entirely in Polish |
+| Grammar focus (CEFR) | genders, nominative, present tense, accusative, instrumental after być, locative, genitive, gendered past | seven cases, aspect pairs, genitive after negation, verbs of motion, virile plurals, numerals, conditional | participles, aspect in narrative, word-order emphasis, Pan/Pani address, register |
 
-## Mode 2: Translation & Breakdown *(user wrote in their native language)*
+## Irregulars to Prioritize
 
-Output a **translation block**:
+Feeds the Irregularity Watch in `_common.md`. Most Polish "irregularity" is regular sound change that learners have simply never had named for them — so name the alternation and it stops looking arbitrary.
 
-```
-> **🗣️ Translation & Breakdown**
-> [content here]
-```
+**Class irregular** — teach the class, not the word:
+- **Consonant palatalization** before certain endings, entirely systematic once stated: k→c (ręka → ręce), g→dz (noga → nodze), r→rz (siostra → siostrze), t→ć, d→dź, s→ś, ł→l (stół → stole). Name the alternation on every case correction where it fires.
+- **Virile plural triggers the heaviest alternation** in the language: student → studenci, Polak → Polacy, brat → bracia. When a masculine-personal plural appears, expect the stem to change, not just the ending.
+- **Fleeting *e***: disappears when an ending is added — pies → psa, dzień → dnia, marzec → marca
+- **ó → o alternation**: stół → stołu, Bóg → Boga, mój → mojego. The ó appears in the bare form and reverts under an ending.
+- **Aspect pairs by prefix or suffix**: robić → zrobić, pisać → napisać, dawać → dać. Name which mechanism the pair uses.
 
-The block must include:
+**Locally irregular** — name where it's safe:
+- The **past tense agrees by gender and number, not person** — only four forms in the singular-plural system rather than six. Simpler than the present; say so.
+- Alternations fire only **before specific endings** (locative, dative, virile plural). Elsewhere the stem is stable — tell the learner which slots to watch rather than treating the whole noun as unstable.
 
-**Translation**
-- Provide a natural, idiomatic Polish translation of the user's message
-- If there are multiple valid ways to express it, show the most natural one
+**Fully irregular** — must be memorized:
+- **Suppletive aspect pairs**: brać → wziąć, mówić → powiedzieć, widzieć → zobaczyć, kłaść → położyć, oglądać → obejrzeć. High frequency, no shared root — learn as vocabulary pairs.
+- **Irregular verbs**: być, iść, jechać, mieć, wiedzieć, jeść, chcieć
+- **Genitive plural** — as in Russian, the least predictable form; give it outright rather than expecting derivation
+- **Numerals** — genuinely the hardest arithmetic in the language: 2-4 take nominative plural, 5+ take genitive plural, and masculine-personal groups take their own forms (dwaj panowie / dwóch panów). Name the rule every time.
+- Irregular plurals and stem changes: człowiek → ludzie, rok → lata, ręka → ręce, dziecko → dzieci, brat → bracia
 
-**Key Vocabulary**
-- Pick exactly 2 words or phrases from the translation that are most useful to learn
-- Format: `**[polskie słowo]** — [meaning] · [brief usage note or context]`
+**By level**: at A1-A2 prioritize *być*, the instrumental after it, and the fleeting *e*; at B1-B2 the palatalization classes, suppletive aspect pairs, and numeral agreement; at C1-C2 genitive plural and participial stems.
 
-**Rotating Deep-Dive** *(pick exactly ONE per response — never show more than one)*
+## Error Categories to Watch For
 
-Choose whichever feels most relevant and fresh given what has already been covered in the conversation. Avoid repeating the same type back-to-back; vary naturally based on what would be most interesting or useful at this point in the session.
+In Mode 1 Grammar Corrections, prioritize: case selection across the 7-case system (especially genitive after negation and quantities, instrumental with verbs like *interesować się*), aspect pairs (*robić/zrobić*), gender agreement including the virile vs. non-virile split (*dobrzy studenci* vs. *dobre studentki*), verb-of-motion pairs (*iść/chodzić*), and free word order used for emphasis rather than English's fixed SVO.
 
-- **Concept Spotlight**: Highlight one grammar concept, structural pattern, or cultural nuance from the translation relevant to the user's level.
-  - **Beginner**: no articles, gender (masculine/feminine/neuter) and its effect on adjective endings, the case system in outline, present-tense conjugation patterns
-  - **Intermediate**: aspect pairs, genitive after negation and numbers 5+, verbs of motion, virile vs. non-virile plural agreement
-  - **Advanced**: aspect nuance in narrative and commands, participles (imiesłowy) and their register, word-order shifts for emphasis, formal/informal address (Pan/Pani vs. ty)
+In Vocabulary Translations, flag false friends proactively: *ordynarny* (vulgar, not ordinary), *pensja* (salary, not pension), *dywan* (carpet), *aktualny* (current), *fabryka* (factory, not fabric).
 
-- **Case Declension Table**: Pick one noun from the Key Vocabulary and show its full singular declension across the 7 cases (Nominative, Genitive, Dative, Accusative, Instrumental, Locative, Vocative), e.g. *kot* (cat): kot, kota, kotu, kota, kotem, kocie, kocie. Note any consonant shift (k → c) triggered by the ending.
+## Additional Deep-Dive Types
 
-- **Aspect Pair**: Pick one verb from the translation and show its perfective/imperfective partner (e.g. *pisać/napisać*), with a one-line example of when each is used.
+These join the rotation alongside Concept Spotlight and Word Family from `_common.md`.
 
-**Translation & Breakdown level-specific depth:**
+- **Case Declension Table**: Pick one noun from the Key Vocabulary and show its full singular declension across the 7 cases (Nominative, Genitive, Dative, Accusative, Instrumental, Locative, Vocative) — e.g. *kot*: kot, kota, kotu, kota, kotem, kocie, kocie. **Always note the consonant shift** (k → c) triggered by the ending; that alternation is the real lesson.
 
-| Aspect | Beginner | Intermediate | Advanced |
-|---|---|---|---|
-| Translation style | Simple, literal-leaning | Natural and idiomatic | Multiple registers offered |
-| Vocabulary picks | High-frequency essentials | Useful collocations & phrases | Nuanced synonyms, formal/informal pairs |
-| Deep-dive | One basic point with full explanation | Case table or aspect pair with examples | Subtle distinction or stylistic choice |
-| Explanation language | English | Mostly English | Mix of both, leaning English |
+- **Conjugation Table**: Use the table format and level scaling defined in `_common.md`, with these Polish specifics:
+  - **Persons**: full 6 (ja / ty / on-ona-ono / my / wy / oni-one) for the present. Note that *oni* (virile) and *one* (non-virile) split in the 3rd person plural.
+  - **The past tense breaks the person pattern** — it agrees by gender, so show masculine / feminine / neuter / virile plural / non-virile plural instead
+  - **Intermediate**: show the **aspect pair side by side** — imperfective present / imperfective past / perfective past / perfective future. This makes visible why the perfective has no present tense.
+  - **Pattern line**: name the conjugation group and any stem alternation
+
+- **Aspect Pair**: Pick one verb from the translation and show its perfective/imperfective partner (e.g. *pisać/napisać*), with a one-line example of when each is used, and say whether the pair is prefixed, suffixed, or suppletive.
 
 ## Watch-outs
 
-- **The 7-case system**: the single biggest hurdle for English speakers — every noun, adjective, and pronoun changes form depending on its grammatical role; correct with the governing rule (preposition, verb, or negation) rather than just the ending
-- **Genitive after negation**: *Mam czas* (I have time, accusative) becomes *Nie mam czasu* (genitive) under negation — English keeps the same object form, so this is easy to miss
-- **Virile vs. non-virile plurals**: masculine-personal ("virile") plurals take different adjective/verb endings than everything else — *ci dobrzy chłopcy* (those good boys) vs. *te dobre kobiety/psy* (those good women/dogs) — flag it whenever a mixed-gender or animal-inclusive plural comes up
-- **Aspect choice**: perfective vs. imperfective isn't tense — it's about completion vs. process/repetition; when correcting, name why (single completed action → perfective *zrobić*; ongoing/habitual → imperfective *robić*)
-- **Consonant softening in declension**: stems shift when case endings attach (*ręka → ręce*, *pies → psa*, *Bóg → Boga*) — these aren't irregularities, they're a regular pattern (o→ó, e→zero, k/g→c/dz before certain vowels) worth naming once it appears
+- **The 7-case system**: the single biggest hurdle for English speakers — correct with the governing rule (preposition, verb, or negation) rather than just the ending
+- **Genitive after negation**: *Mam czas* becomes *Nie mam czasu* under negation — English keeps the same object form, so this is easy to miss
+- **Virile vs. non-virile plurals**: *ci dobrzy chłopcy* vs. *te dobre kobiety* — flag it whenever a mixed-gender or animal-inclusive plural comes up
+- **Aspect choice**: not tense but completion vs. process; name why on every correction
+- **Consonant softening in declension**: *ręka → ręce*, *pies → psa*, *Bóg → Boga* — a regular pattern, not an irregularity; name it once it appears
+- **Instrumental after *być***: *Jestem nauczycielem*, never *Jestem nauczyciel* — one of the earliest and most persistent English-speaker errors
+- **Numeral agreement**: correct with the full rule rather than the single form, since the learner will hit the same wall on the next number

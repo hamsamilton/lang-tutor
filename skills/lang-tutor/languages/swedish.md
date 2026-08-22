@@ -1,89 +1,103 @@
 # Swedish Tutor Guide
 
-Swedish is a North Germanic language written in the Latin alphabet plus three extra letters (å, ä, ö) sorted at the end of the alphabet. It has pitch accent (a musical rise/fall distinguishing some word pairs, e.g. *anden* the duck vs. the spirit) — worth a passing mention, but don't over-emphasize it in text-based feedback since it's inaudible in writing.
+Read this together with `_common.md`, which defines the feedback block formats, the universal deep-dive types, and the baseline level tables. This file supplies what is specific to Swedish.
 
-## Mode 1: Language Feedback *(user wrote in Swedish)*
+## Conventions
 
-Output a **language feedback block**:
+Swedish is a North Germanic language written in the Latin alphabet plus three extra letters (å, ä, ö) sorted at the end of the alphabet. It has pitch accent (a musical rise/fall distinguishing some word pairs, e.g. *anden* the duck vs. the spirit) — worth a passing mention, but don't over-emphasize it in text-based feedback since it's inaudible in writing. Always give nouns with en/ett.
 
-```
-> **🗣️ Language Feedback**
-> [feedback content here]
-```
+## Framework Alignment: CEFR / SFI / Tisus
 
-The feedback block must include whichever of the following are relevant:
+Swedish is CEFR-aligned, with a distinctive practical ladder — SFI (Svenska för invandrare) runs courses A through D, and Tisus is the university gate:
 
-**Grammar Corrections**
-- Identify grammar errors in the user's message
-- Show what was wrong, explain briefly why, and provide the corrected version
-- Format: `"[original]" → "[corrected]" — [brief explanation]`
-- Watch especially for: en/ett gender affecting indefinite articles and adjective endings (en stor bil vs. ett stort hus), definite forms attached as suffixes (bil → bilen, hus → huset) plus a separate preposed article when an adjective is added (den stora bilen, det stora huset), V2 word order — the verb must stay in second position even when something other than the subject is fronted (Idag går jag hem, not Idag jag går hem), adjective agreement in number/gender/definiteness (en stor bil / ett stort hus / stora bilar/hus), and the sin/sitt/sina vs. hans/hennes/deras distinction for reflexive possessives (Han älskar sin fru vs. Han älskar hans fru — different referents)
-
-**Idiom & Naturalness Suggestions**
-- If the sentence is grammatically correct but a native speaker would phrase it differently, suggest the more natural phrasing
-- Format: `💡 A native speaker might say: "[natural phrasing]"`
-- Watch for literal English transfers that are grammatical but un-Swedish
-
-**Vocabulary Translations**
-- If the user mixed in any native-language words, provide the Swedish translation with its article (en/ett)
-- Format: `"[native word]" → "[en/ett svenskt ord]"`
-- Flag false friends when they appear: *bra* (good, not "brave"), *rolig* (fun, not "rowdy"/"rueful"), *semester* (vacation, not "semester" of school), *glass* (ice cream, not "glass")
-
-**Language Feedback level-specific behavior:**
-
-| Aspect | Beginner | Intermediate | Advanced |
+| Guide level | CEFR | Swedish system | Can-do target |
 |---|---|---|---|
-| Corrections | All errors, with full explanations | Word-order and en/ett precision | Subtle errors and nuance only |
-| Translations | Provide liberally, with articles | Only for uncommon words | Rarely, only specialized terms |
-| Alternative sentences | Provide full rewritten versions | Provide key phrases | Only for stylistic improvement |
-| Idioms | Introduce simple ones | Actively teach idioms | Focus on register and formality |
-| Feedback language | Mix of Swedish + English | Mostly Swedish | Entirely in Swedish |
+| Beginner | A1-A2 | SFI courses A-B | en/ett and definite suffixes; V2 order; present and past; adjective agreement |
+| Intermediate | B1-B2 | SFI courses C-D, Swedex B1/B2 | Double definiteness; subclause word order; supine and perfect; sin/sitt/sina |
+| Advanced | C1-C2 | **Tisus**, Behörighetsgivande svenska | Particle verbs; register range; academic and bureaucratic Swedish |
 
-## Mode 2: Translation & Breakdown *(user wrote in their native language)*
+Tisus (or SAS 3) is the requirement for Swedish university admission — a useful anchor if the user has a concrete goal.
 
-Output a **translation block**:
+## Grammar Syllabus
 
-```
-> **🗣️ Translation & Breakdown**
-> [content here]
-```
+The standard CEFR/SFI sequence. Within each level, earlier items are foundational and should be taught before later ones. This drives both the Grammar Corrections priority in Mode 1 and the Concept Spotlight in Mode 2.
 
-The block must include:
+- **Beginner (A1-A2)**: **en/ett gender** → the definite article as a **suffix** (bil → bilen, hus → huset) → present tense → **V2 word order** and inversion after fronting → adjective agreement (en stor bil / ett stort hus / stora bilar) → the five plural declensions → past tense → modal verbs → question formation
+- **Intermediate (B1-B2)**: **double definiteness** (den stora bilen) → **subclause word order and the BIFF rule** (*i **B**isats kommer **i**nte **f**öre **f**inita verbet* — in a subordinate clause, *inte* precedes the verb) → supine vs. past participle (har läst vs. är läst) → **sin/sitt/sina vs. hans/hennes/deras** → the s-passive and bli-passive → particle verbs → conditional with skulle
+- **Advanced (C1-C2)**: pitch accent minimal pairs → idiomatic particle verbs (komma på, ta upp, hålla på) → formal and bureaucratic register vs. spoken → nominal style → complex subordination
 
-**Translation**
-- Provide a natural, idiomatic Swedish translation of the user's message
-- If there are multiple valid ways to express it, show the most natural one and note register (du is near-universal, but flag formal contexts) when relevant
+Add this row to both level tables in `_common.md`:
 
-**Key Vocabulary**
-- Pick exactly 2 words or phrases from the translation that are most useful to learn. Always include en/ett for nouns.
-- Format: `**[en/ett svenskt ord]** — [meaning] · [brief usage note or context]`
-
-**Rotating Deep-Dive** *(pick exactly ONE per response — never show more than one)*
-
-Choose whichever feels most relevant and fresh given what has already been covered in the conversation. Avoid repeating the same type back-to-back; vary naturally based on what would be most interesting or useful at this point in the session.
-
-- **Concept Spotlight**: Highlight one grammar concept, structural pattern, or cultural nuance from the translation relevant to the user's level.
-  - **Beginner**: en/ett and the matching adjective/definite forms, basic V2 order, English-Swedish cognate patterns (sound shifts: ship → skepp, house → hus, three → tre)
-  - **Intermediate**: subclause word order (att/om/eftersom send negation before the verb: att jag inte vet), double-definiteness (den/det/de + definite noun), supine vs. past participle in perfect tense (har läst vs. är läst)
-  - **Advanced**: pitch accent minimal pairs, particle verbs and idiomatic prepositions (komma på, ta upp), formal/bureaucratic vs. spoken register differences
-
-- **V2 Word Order**: Take the translated sentence (or one clause of it) and show a fronted element (time, place, or object) with the verb held in strict second position — e.g. *Igår [V2:åkte] jag till Stockholm* — contrast with the English-tempting but wrong *Igår jag åkte*.
-
-- **Word Family**: Pick one word from the Key Vocabulary and show 2-3 relatives — noun/verb/adjective derivations or a compound-noun breakdown (e.g. arbete: arbeta, arbetsplats, arbetslös), noting how Swedish glues compounds together where English uses separate words or hyphens.
-
-**Translation & Breakdown level-specific depth:**
-
-| Aspect | Beginner | Intermediate | Advanced |
+| Aspect | Beginner (A1-A2) | Intermediate (B1-B2) | Advanced (C1-C2) |
 |---|---|---|---|
-| Translation style | Simple, literal-leaning | Natural and idiomatic | Multiple registers offered |
-| Vocabulary picks | High-frequency essentials, with articles | Useful collocations & phrases | Nuanced synonyms, formal/informal pairs |
-| Deep-dive | One basic point with full explanation | Word-order or compound pattern with examples | Pitch accent or register nuance |
-| Explanation language | English | Mostly English | Mix of both, leaning English |
+| Grammar focus (CEFR) | en/ett, definite suffix, present tense, V2 order, adjective agreement, plural declensions, past tense | double definiteness, BIFF subclause order, supine vs. participle, sin/sitt/sina, s-passive, particle verbs | pitch accent, idiomatic particle verbs, register, nominal style, complex subordination |
+
+## Irregulars to Prioritize
+
+Feeds the Irregularity Watch in `_common.md`. Swedish opens with the best news in Germanic: **verbs do not conjugate for person at all.** *Jag är, du är, han är, vi är, ni är, de är* — one form. Say this at the first opportunity; learners arriving from German or a Romance language find it startling.
+
+**Class irregular** — teach the class, not the word:
+- **Four verb classes**, identifiable from the infinitive and highly predictable:
+
+  | Class | Present | Past | Supine | Example |
+  |---|---|---|---|---|
+  | 1 (-ar) | talar | talade | talat | tala, arbeta, fråga |
+  | 2 (-er) | ringer | ringde/ringte | ringt | ringa, köpa, läsa |
+  | 3 (short) | bor | bodde | bott | bo, tro, sy |
+  | 4 (strong) | skriver | skrev | skrivit | skriva, dricka, ta |
+
+- **Strong verbs by ablaut**, the same inherited series as English: skriva → skrev → skrivit (*write/wrote/written*); dricka → drack → druckit (*drink/drank/drunk*); binda → band → bundit. Point at the English cognate and the class stops looking foreign.
+- **Five plural declensions**, partly predicted by gender and ending: -or (en-words in -a: flicka → flickor), -ar (many en-words: bil → bilar), -er (en-words, often loans: park → parker), -n (ett-words ending in a vowel: äpple → äpplen), and **no ending** (ett-words ending in a consonant: hus → hus, barn → barn). Name the declension rather than the form.
+- **Class 2 past tense splits -de/-te** by whether the stem ends in a voiceless consonant — köpa → köpte, ringa → ringde. The same logic as Dutch 't kofschip.
+
+**Locally irregular** — name where it's safe:
+- Because there is no person agreement, an irregular Swedish verb is irregular in only **three slots** — past, supine, and sometimes present. Everything else is fixed. This makes Swedish strong verbs far less work than their German cousins.
+- The **definite suffix is regular** once the gender is known; the difficulty is the gender, not the ending.
+
+**Fully irregular** — must be memorized:
+- **vara** (är / var / varit), plus *ha, göra, gå, få, se, ge, veta, kunna, vilja, skola*
+- **en/ett has no reliable rule.** Roughly 75% of nouns are en-words, but a wrong guess cascades into the article, the adjective ending, the definite suffix, and the plural declension all at once. Learn every noun with its article — the single most under-taught irregularity in Swedish.
+- **Umlaut plurals**: man → män, hand → händer, bok → böcker, fot → fötter, tand → tänder, mus → möss, gås → gäss
+- Irregular comparatives: *bra → bättre → bäst*, *dålig → sämre → sämst*, *gammal → äldre → äldst*, *stor → större → störst*, *liten → mindre → minst*, *många → fler → flest*
+- **liten** is suppletive across forms: en liten bil / ett litet hus / den lilla bilen / små bilar — four stems for one adjective
+
+**By level**: at A1-A2 prioritize *vara/ha*, the en/ett of every new noun, and its plural declension; at B1-B2 the strong-verb classes and supine forms; at C1-C2 particle-verb idiom and irregular comparatives.
+
+## Error Categories to Watch For
+
+In Mode 1 Grammar Corrections, prioritize: en/ett gender and the adjective endings it controls, definite forms as suffixes plus the preposed article when an adjective is added, **V2 word order** with the verb held in second position after fronting (*Idag går jag hem*, not *Idag jag går hem*), adjective agreement in number/gender/definiteness, and **sin/sitt/sina vs. hans/hennes/deras**.
+
+Watch for literal English transfers that are grammatical but un-Swedish.
+
+In Vocabulary Translations, always give en/ett, and flag false friends proactively: *bra* (good), *rolig* (fun), *semester* (vacation), *glass* (ice cream), *eventuellt* (possibly), *aktuell* (current/topical).
+
+## Additional Deep-Dive Types
+
+These join the rotation alongside Concept Spotlight and Word Family from `_common.md`.
+
+> **Note on conjugation tables**: the person-based table in `_common.md` does **not** apply — Swedish verbs have one form per tense regardless of person. Use the Form Table below in its place.
+
+- **Form Table**: Pick one verb from the translation and lay its **principal parts** out as a table — the four forms every Swedish dictionary lists:
+
+  | Infinitive | Present | Past | Supine | Imperative |
+  |---|---|---|---|---|
+  | att skriva | skriver | skrev | skrivit | skriv! |
+
+  - **Beginner (A1-A2)**: infinitive / present / past
+  - **Intermediate (B1-B2)**: add the supine (for *har* + supine perfect) and the past participle (for the bli-passive), which learners routinely conflate
+  - **Advanced (C1-C2)**: add s-passive forms and any particle-verb variants
+  - Close with one line naming the class (1, 2 with -de or -te, 3, or 4 strong with its ablaut) and one more verb in it.
+
+- **V2 Word Order**: Take the translated sentence (or one clause) and show a fronted element (time, place, or object) with the verb held in strict second position — e.g. *Igår **åkte** jag till Stockholm* — contrasting with the English-tempting but wrong *Igår jag åkte*. If the sentence has a subclause, show the BIFF contrast too. This is the highest-value Swedish deep-dive.
+
+- **Word Family**: Pick one word from the Key Vocabulary and show 2-3 relatives — noun/verb/adjective derivations or a compound breakdown (e.g. arbete: arbeta, arbetsplats, arbetslös), noting how Swedish glues compounds together where English uses separate words.
 
 ## Watch-outs
 
 - **En/ett split**: roughly 75% of nouns are en-words, but there's no fully reliable rule — teach every noun with its article, and note the definite suffix differs (en bil → bilen, ett hus → huset)
-- **V2 order after fronting**: any fronted adverbial (Idag, Igår, Ibland) still forces the verb into second position — this is the single most common error transferred from English SVO habits
-- **Double definiteness with adjectives**: an adjective before a definite noun requires both the preposed article and the noun's definite suffix — "den stora bilen," not "stora bilen"
-- **Sin/sitt/sina vs. hans/hennes**: sin/sitt/sina refers back to the subject of the clause; using hans/hennes there instead changes (or confuses) who owns what — a persistent and meaning-changing error
-- **False friends and literal transfers**: *eventuellt* (possibly, not eventually), *aktuell* (current/topical, not actual) — and watch for over-literal calques like "det gör mening" (should be "det är logiskt" / "det låter rimligt")
+- **V2 order after fronting**: any fronted adverbial (Idag, Igår, Ibland) still forces the verb into second position — the single most common error transferred from English SVO habits
+- **Double definiteness with adjectives**: an adjective before a definite noun requires both the preposed article and the definite suffix — *den stora bilen*, not *stora bilen*
+- **Sin/sitt/sina vs. hans/hennes**: sin/sitt/sina refers back to the subject of the clause; using hans/hennes changes who owns what — a persistent and meaning-changing error
+- **False friends and literal transfers**: *eventuellt*, *aktuell* — and watch for calques like *"det gör mening"* (should be *det är logiskt* / *det låter rimligt*)
+- **Plural declension**: never introduce a noun without its plural — the five classes are only partly predictable, and a wrong guess is immediately audible
+- **BIFF in subclauses**: *inte* moves before the verb after att/om/eftersom (*att jag **inte** vet*) — give the rule rather than the corrected form

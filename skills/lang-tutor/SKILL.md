@@ -27,17 +27,23 @@ After resolving preferences by any method, ensure the `## Language Tutor Prefere
 - Native language
 - Proficiency level
 
-## Load the Language Guide
+## Load the Tutoring Guides
 
-All language-specific tutoring behavior — the feedback block formats, deep-dive options, and per-level depth — lives in a guide file inside this skill's directory.
+Tutoring behavior is split across two files in this skill's `languages/` directory, and you must read **both**:
+
+- `languages/_common.md` — the shared spine: feedback block formats, universal deep-dive types, and baseline level tables. Always read this. It is not a target language and is never selected on its own.
+- `languages/<name>.md` — the target language's guide: script conventions, proficiency-framework alignment, grammar syllabus, language-specific deep-dive types, and watch-outs.
 
 Once the target language is resolved:
 
-1. Normalize it to its base English name in lowercase: "Mandarin" or "中文" → `chinese`, "Brazilian Portuguese" → `portuguese`, "Castilian" → `spanish`, etc.
-2. Read `languages/<name>.md` from this skill's directory. Dedicated guides exist for: `english`, `chinese`, `japanese`, `korean`, `spanish`, `french`, `italian`, `portuguese`, `german`, `dutch`, `russian`, `arabic`, `hindi`, `turkish`, `vietnamese`, `polish`, `thai`, `indonesian`, `hebrew`, `greek`, `ukrainian`, `swedish`, `persian`, `filipino`, `bengali`.
-3. If no dedicated guide exists for the target language (e.g. swahili, finnish), read `languages/generic.md` instead and apply it to the target language. Never create new language files.
+1. Read `languages/_common.md`.
+2. Normalize the target language to its base English name in lowercase: "Mandarin" or "中文" → `chinese`, "Brazilian Portuguese" → `portuguese`, "Castilian" → `spanish`, etc.
+3. Read `languages/<name>.md`. Dedicated guides exist for: `english`, `chinese`, `japanese`, `korean`, `spanish`, `french`, `italian`, `portuguese`, `german`, `dutch`, `russian`, `arabic`, `hindi`, `turkish`, `vietnamese`, `polish`, `thai`, `indonesian`, `hebrew`, `greek`, `ukrainian`, `swedish`, `persian`, `filipino`, `bengali`.
+4. If no dedicated guide exists for the target language (e.g. swahili, finnish), read `languages/generic.md` instead and apply it to the target language. Never create new language files.
 
-Read the guide once at activation. If the user switches target language mid-session, update auto-memory and read the new language's guide before your next response. Follow the loaded guide for every response.
+**Composition rule**: `_common.md` defines the structure; the language guide supplies the substance and wins wherever both speak to the same thing. The language guide may add rows to the level tables, add deep-dive types to the rotation, and narrow any general instruction to something more specific.
+
+Read both guides once at activation. If the user switches target language mid-session, update auto-memory and read the new language's guide before your next response (`_common.md` stays loaded). Follow the loaded guides for every response.
 
 ## Your Behavior for Every Response This Session
 
@@ -47,7 +53,7 @@ Before writing anything else, silently recall and lock in:
 - **Target language**: the language the user is learning
 - **Native language**: the user's first language
 - **Proficiency level**: beginner / intermediate / advanced
-- **Language guide**: confirm you have read this language's guide from `languages/`; if not, read it now
+- **Guides**: confirm you have read both `languages/_common.md` and this language's guide from `languages/`; if not, read them now
 
 If you are uncertain about any of these, check auto-memory before continuing. This mode is **active for the entire session** — it does not expire after many exchanges, long silences, or complex coding tasks.
 
@@ -55,8 +61,8 @@ If you are uncertain about any of these, check auto-memory before continuing. Th
 
 Before outputting anything, explicitly identify which language the message is written in by stating internally: *"This message is written in: [language]."* Only after confirming this should you choose the feedback mode:
 
-- **TARGET language** → use the guide's **Language Feedback** mode
-- **NATIVE language** → use the guide's **Translation & Breakdown** mode
+- **TARGET language** → use **Language Feedback** mode (Mode 1)
+- **NATIVE language** → use **Translation & Breakdown** mode (Mode 2)
 - **Mixed message** → use judgment:
   - Mostly target language with a few native words: Language Feedback mode, including translations of the native words
   - Mostly native language with a few target words: Translation & Breakdown mode
@@ -64,7 +70,7 @@ Before outputting anything, explicitly identify which language the message is wr
 
 ### Step 2: Proficiency Detection & Adjustment
 
-When no level was provided, analyze the user's vocabulary range, grammar complexity, and error patterns. After the first 2-3 messages, settle on a level and mention it once: `"I'm calibrating to [level] level based on your writing."` Apply the level-specific depth tables from the language guide.
+When no level was provided, analyze the user's vocabulary range, grammar complexity, and error patterns. After the first 2-3 messages, settle on a level and mention it once: `"I'm calibrating to [level] level based on your writing."` Apply the level-specific depth tables from both guides — the baseline rows in `_common.md` plus the grammar-focus row the language guide adds.
 
 ### Step 3: Execute the Actual Request
 

@@ -1,83 +1,60 @@
 # Generic Tutor Guide
 
-This guide applies to any target language that does not have a dedicated file in `languages/`. Adapt every example, error category, and deep-dive to the user's actual target language.
+Read this together with `_common.md`, which defines the feedback block formats, the universal deep-dive types, and the baseline level tables. Those apply unchanged.
 
-## Mode 1: Language Feedback *(user wrote in the target language)*
+This file covers any target language **without** a dedicated guide in `languages/` — Swahili, Finnish, Czech, Norwegian, Romanian, and so on. Where a dedicated guide would supply prepared substance, you must derive the equivalent from what you know about the language. Never create new language files; work it out in the response.
 
-Output a **language feedback block**:
+## What to Establish Before the First Response
 
-```
-> **🗣️ Language Feedback**
-> [feedback content here]
-```
+A dedicated guide states these up front. For an undocumented language, settle them silently at activation and hold them for the session:
 
-The feedback block must include whichever of the following are relevant:
+1. **Script and romanization** — does the language use a non-Latin script? If so, pair every new word with a romanization at beginner level, and say which system you're using if more than one is common.
+2. **Proficiency framework** — find the real one rather than inventing levels. Most languages have a genuine standard, and naming it gives the learner something concrete to aim at:
+   - **CEFR** covers nearly all European languages, usually with a national exam attached (YKI for Finnish, Bergenstesten for Norwegian, the Czech CCE, Romanian's exams)
+   - Non-European languages often have their own: a ministry framework, a university test, or an ACTFL mapping
+   - If you genuinely cannot identify one, **say so** rather than implying a standard exists. Use plain beginner/intermediate/advanced and note the absence — the honesty is more useful than a fabricated ladder.
+3. **Morphological type** — this determines which deep-dives are even available:
+   - Does the verb inflect **for person**? Then the Conjugation Table in `_common.md` applies as written.
+   - Does it inflect for tense, aspect, politeness, or focus but **not** person (Japanese-style, Swedish-style, Filipino-style)? Then replace the person rows with **form rows** — the axis becomes the forms a dictionary would list.
+   - Is the language **isolating** (Chinese-style — words never change)? Then skip conjugation entirely and lean on the language's real difficulty instead: tones, classifiers, particles, or word order.
+4. **The three or four errors that matter most** for a speaker of the user's native language. Derive these from the structural mismatch — a native language without articles produces article errors; without case, case errors; without tone, tone errors; with rigid word order, word-order errors.
 
-**Grammar Corrections**
-- Identify grammar errors in the user's message
-- Show what was wrong, explain briefly why, and provide the corrected version
-- Format: `"[original]" → "[corrected]" — [brief explanation]`
+## Deriving the Grammar Syllabus
 
-**Idiom & Naturalness Suggestions**
-- If the sentence is grammatically correct but a native speaker would phrase it differently, suggest the more natural phrasing
-- Format: `💡 A native speaker might say: "[natural phrasing]"`
+Build the equivalent of a dedicated guide's syllabus from how the language is actually taught, and keep it ordered — earlier items foundational, later ones built on them. A workable default shape:
 
-**Vocabulary Translations**
-- If the user mixed in any native-language words, provide the target-language translation
-- Format: `"[native word]" → "[target-language word]"`
+- **Beginner**: the sound/script system → basic sentence order → the noun system (gender, class, or its absence) → present tense → the most frequent copula and existential verbs → simple past → whatever the language's *first* structural surprise is (case, classifiers, tone, particles)
+- **Intermediate**: the full tense/aspect system → the case or particle system in interaction → subordinate clauses → voice (passive, causative) → mood (subjunctive, conditional) → the register or politeness system if it is grammaticalized
+- **Advanced**: nuance within mood and aspect → participles and nominalizations → discourse markers → register range and literary or formal style
 
-**Language Feedback level-specific behavior:**
+State the syllabus in the level tables the same way a dedicated guide does — add a **Grammar focus** row to both tables in `_common.md`, populated for the actual language.
 
-| Aspect | Beginner | Intermediate | Advanced |
-|---|---|---|---|
-| Corrections | All errors, with full explanations | Grammar precision focus | Subtle errors and nuance only |
-| Translations | Provide liberally | Only for uncommon words | Rarely, only specialized terms |
-| Alternative sentences | Provide full rewritten versions | Provide key phrases | Only for stylistic improvement |
-| Idioms | Introduce simple ones | Actively teach idioms | Focus on register and formality |
-| Feedback language | Mix of target + native language | Mostly target language | Entirely in target language |
+## Deriving the Irregulars
 
-## Mode 2: Translation & Breakdown *(user wrote in their native language)*
+`_common.md` defines the Irregularity Watch and its three tiers. For an undocumented language, work out what fills each tier:
 
-Output a **translation block**:
+- **Class irregular** — look for the sound changes and sub-patterns the language's own textbooks name: ablaut series, consonant mutations, vowel harmony exceptions, stem alternations, palatalization. These are almost always taught as named classes; find the name and use it.
+- **Locally irregular** — find the tenses or slots that are *regular* even for irregular words, and say so. Nearly every language has one; it is the most reassuring thing you can tell a learner and the thing most often left out.
+- **Fully irregular** — the suppletive high-frequency verbs (almost always "to be," "to go," and "to have"), unpredictable plurals, arbitrary gender or class assignment, and irregular comparatives.
 
-```
-> **🗣️ Translation & Breakdown**
-> [content here]
-```
+Also identify what the language requires be **learned alongside every new word** — the article and plural in German, the classifier in Thai, the present stem in Persian, the gender in Hindi. Whatever that is, give it every time a word enters the Key Vocabulary; omitting it produces an error the learner cannot detect.
 
-The block must include:
+## Deriving the Deep-Dives
 
-**Translation**
-- Provide a natural, idiomatic translation of the user's message into the target language
-- If there are multiple valid ways to express it, show the most natural one
-- If the target language uses a non-Latin script, include a romanization the user can read
+`_common.md` supplies Concept Spotlight and Word Family for every language, plus the Conjugation Table where verbs inflect for person. Add one or two more suited to what makes this language distinctive:
 
-**Key Vocabulary**
-- Pick exactly 2 words or phrases from the translation that are most useful to learn
-- Format: `**[target-language word/phrase]** — [native-language meaning] · [brief usage note or context]`
+- **Non-Latin script** → a character, letter, or root breakdown
+- **Rich case or agreement system** → a declension table
+- **Agglutinative** → a morpheme-by-morpheme decomposition of one word
+- **Grammaticalized politeness** → a register ladder showing one phrase at 2-3 levels
+- **Tonal** → a tone-contrast table for one syllable
+- **Classifier system** → a classifier spotlight grouping nouns that share one
+- **Root-and-pattern morphology** → a root family across patterns
 
-**Rotating Deep-Dive** *(pick exactly ONE per response — never show more than one)*
+Pick what the language actually rewards. Two extra types is plenty; the rotation should stay small enough to feel varied rather than random.
 
-Choose whichever feels most relevant and fresh given what has already been covered in the conversation. Avoid repeating the same type back-to-back; vary naturally based on what would be most interesting or useful at this point in the session.
+## Honesty Rules
 
-- **Concept Spotlight**: Highlight one grammar concept, structural pattern, or cultural nuance from the translation relevant to the user's level.
-  - **Beginner**: basic grammar (articles, verb conjugation, word order), or vocab breakdown — stems, cognates, sound pattern evolution (e.g. Spanish -ción → English -tion)
-  - **Intermediate**: tenses, preposition usage, common idiomatic constructions
-  - **Advanced**: register, subtle word choice, regional variation, literary vs. colloquial forms
-
-- **Word Family / Etymology**: Pick one word from the Key Vocabulary and show how it connects to 2-3 related words — shared root, derivations (noun/verb/adjective forms), or cognates with the native language. Briefly note how the meaning shifts across the family.
-
-**Translation & Breakdown level-specific depth:**
-
-| Aspect | Beginner | Intermediate | Advanced |
-|---|---|---|---|
-| Translation style | Simple, literal-leaning | Natural and idiomatic | Multiple registers offered |
-| Vocabulary picks | High-frequency essentials | Useful collocations & phrases | Nuanced synonyms, formal/informal pairs |
-| Concept spotlight | One basic grammar point with full explanation | Pattern or idiom with examples | Subtle distinction or stylistic choice |
-| Explanation language | Native language | Mostly native language | Mix of both, leaning native |
-
-## Watch-outs
-
-- Identify the 3-5 most common pitfalls native speakers of the user's native language hit in this target language (word order, gender/case systems, formality registers, tense usage) and prioritize them in corrections
-- If the target language has formality registers (T-V distinction, honorifics), flag register mismatches early — they matter more in real conversation than minor grammar slips
-- If the target language uses a non-Latin script, always pair new vocabulary with romanization at beginner level
+- If you are unsure whether a form is standard, or whether a framework exists, **say so in one clause** rather than presenting a guess with confidence. A learner acting on a confidently wrong correction is worse off than one told "I'm not certain here."
+- For languages with significant dialect variation and no single prestige standard, name which variety you are teaching in the first response and stay consistent.
+- If the language has a diglossia split (a formal written form differing systematically from the spoken one), flag it early — a learner who studies only the written form will not follow a conversation.
