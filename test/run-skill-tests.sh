@@ -121,10 +121,14 @@ run_test() {
 
 # --- tests -------------------------------------------------------------------
 
-# Explicit args route to the right language guide.
+# Explicit args route to the right language guide, and the shared spine loads
+# alongside it. Both files are required: _common.md carries the feedback block
+# formats, the deep-dive rotation, and the Irregularity Watch, so a skill that
+# loaded only the language guide would look correct here but tutor incorrectly.
 test_routing() {
   new_env
   run_claude "$SKILL Portuguese English Beginner" || return 1
+  assert_read "languages/_common.md" || return 1
   assert_read "languages/portuguese.md" || return 1
 }
 
@@ -132,13 +136,17 @@ test_routing() {
 test_alias() {
   new_env
   run_claude "$SKILL Mandarin English Beginner" || return 1
+  assert_read "languages/_common.md" || return 1
   assert_read "languages/chinese.md" || return 1
 }
 
 # Unlisted language falls back to generic.md and never creates a new file.
+# The spine must still load — generic.md relies on it exactly as the dedicated
+# guides do.
 test_fallback() {
   new_env
   run_claude "$SKILL Swahili English Beginner" || return 1
+  assert_read "languages/_common.md" || return 1
   assert_read "languages/generic.md" || return 1
   if [ -e "$SKILL_DIR/languages/swahili.md" ]; then
     echo "  FAIL: a swahili.md was created — fallback should never write new guides"
@@ -172,8 +180,9 @@ test_memory() {
   fi
   echo "  ok: preferences saved to auto-memory"
   # New session (no resume), bare invocation: must load saved prefs and
-  # read the portuguese guide again.
+  # read both the spine and the portuguese guide again.
   run_claude "$SKILL" || return 1
+  assert_read "languages/_common.md" || return 1
   assert_read "languages/portuguese.md" || return 1
 }
 

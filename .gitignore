@@ -1,2 +1,10 @@
 .DS_Store
 **/.DS_Store
+
+# Machine-local Claude Code state
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+.claude/scheduled_tasks.json
+.claude/routines/.state/
+.claude/worktrees/
+.claude/checkpoints/
